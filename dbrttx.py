@@ -25,13 +25,8 @@ import matplotlib.pyplot as plt
 def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     m = 0.91e-30  # effective electron mass
     hbar = 1.06e-34  # Planck's constant
-#    temp = 290  # Temperature in Kelvin
-#    perm = 8.85e-12  # Permeability of free space
-#    er = 12.5  # Relative permeability of GaAs
     q = 1.6e-19  # Electron charge
     NI = 25000
-#    dLbe = 2.825e-10
-#    Lbeold = 13.75e-10
     Mw = 0.067
     Me = Mw
     Mc = Mw
@@ -47,7 +42,7 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     Tx = np.zeros((NI, 1))
     E = np.zeros((NI, 1))
 
-    for n in range(NI):  # make more pythonic
+    for n in range(NI):
         E[n] = (n+1)*de
         mult = np.sqrt(2*m*q / (hbar**2))
 
@@ -92,6 +87,7 @@ if __name__ == '__main__':
 
     results = dbtx_calc(fractE=fractE, fractC=fractC, Lw=Lw, Lbe=Lbe, Lbc=Lbc)
 
+    plt.figure()
     plt.semilogy(results[0], results[1])
     plt.title('Transmission probability')
     plt.xlabel('Electron energy, [eV]')

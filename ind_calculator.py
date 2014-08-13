@@ -27,9 +27,9 @@ def txline_calc(ind, freq, er, z0l):
     lambda_g = (3e8 / freq) / np.sqrt(er)
     ind *= 1e-12
 
-    if 2 * np.pi * ind * freq / z0l < -1 or 2 * np.pi * ind * freq / z0l > 1:
-        print 'Line impedance too small or inductance too high'
-# need a statement similar to return -1 in C
+    cond = 2 * np.pi * ind * freq / z0l
+    if cond > 1:
+        raise ValueError
 
     else:
         l_phys = (lambda_g / (2 * np.pi)) * \
@@ -43,7 +43,7 @@ def txline_calc(ind, freq, er, z0l):
         l_phys *= 1e-6
         c_par *= 1e-15
 
-    return (l_elec, l_phys, c_par)
+    return [l_elec, l_phys, c_par]
 
 if __name__ == '__main__':
     freq = raw_input('Enter frequency in GHz: ')
@@ -55,10 +55,13 @@ if __name__ == '__main__':
     z0l = raw_input('Enter transmission line impedance: ')
     z0l = float(z0l)
 
-# need better input sanitisation
+# needs better input sanitisation
 
-    results = txline_calc(ind=ind, freq=freq, er=er, z0l=z0l)
-
-    print 'Electrical length is ', results[0]
-    print 'Physical length is ', results[1], ' um'
-    print 'Parasitic capacitance is ', results[2], ' fF'
+    try:
+        results = txline_calc(ind=ind, freq=freq, er=er, z0l=z0l)
+    except ValueError:
+        print 'Line impedance too low or frequency too high'
+    else:
+        print 'Electrical length is ', results[0]
+        print 'Physical length is ', results[1], ' um'
+        print 'Parasitic capacitance is ', results[2], ' fF'

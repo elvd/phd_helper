@@ -27,19 +27,25 @@ def genpoly(startdir, degree):
         os.chdir(dirname)
         gen = (fname for fname in filelist if 'measurement' in fname and
                '.txt' in fname)
+
         for fname in gen:
             print 'Processing file: %s' % fname
             data = np.loadtxt(fname, skiprows=1)
             coeffs = np.polyfit(data[:, 0], data[:, 1], degree)
+
             plt.figure()
             plt.plot(data[:, 0], data[:, 1])
             plt.plot(data[:, 0], np.polyval(coeffs, data[:, 0]))
+            plt.xlabel('Voltage, [V]')
+            plt.ylabel('Current, [mA]')
             plt.legend(['Measurement', 'Fit'], loc='upper left')
             plt.savefig(fname+'.png')
+
             coeffs = coeffs[::-1]
             polynom = ['(%e)*((_v1+_v2)^%d)+' % (j, i) for (i, j) in
                        enumerate(coeffs)]
-            polynom = ''.join(polynom)
+            polynom = ''.join(polynom)  # convert to Agilent ADS SDD format
+
             with open('autopoly.txt', 'a') as fout:
                 fout.write(fname)
                 fout.write(': \n')
