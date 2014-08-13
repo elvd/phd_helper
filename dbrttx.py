@@ -20,6 +20,7 @@ Created on Mon Aug 04 13:46:17 2014
 
 import numpy as np
 import matplotlib.pyplot as plt
+import elvd_tools
 
 
 def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
@@ -86,10 +87,14 @@ if __name__ == '__main__':
     Lbc = 17e-10
 
     results = dbtx_calc(fractE=fractE, fractC=fractC, Lw=Lw, Lbe=Lbe, Lbc=Lbc)
+#    type(results)
+#    print np.ndim(results)
+    try:
+        graph = elvd_tools.custom_plot(results, '', 'Electron energy, [eV]',
+                                       'Transmission probability', mode='log')
+    except IndexError:
+        print 'Not enough data'
 
-    plt.figure()
-    plt.semilogy(results[0], results[1])
-    plt.title('Transmission probability')
-    plt.xlabel('Electron energy, [eV]')
+    plt.savefig('TxE.png')
 
     plt.show()
