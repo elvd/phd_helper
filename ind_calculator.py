@@ -29,7 +29,7 @@ def txline_calc(ind, freq, er, z0l):
 
     cond = 2 * np.pi * ind * freq / z0l
     if cond > 1:
-        raise ValueError
+        raise ValueError('Line impedance too low or frequency too high')
 
     else:
         l_phys = (lambda_g / (2 * np.pi)) * \
@@ -59,8 +59,8 @@ if __name__ == '__main__':
 
     try:
         results = txline_calc(ind=ind, freq=freq, er=er, z0l=z0l)
-    except ValueError:
-        print 'Line impedance too low or frequency too high'
+    except ValueError as e:
+        print e.message
     else:
         print 'Electrical length is ', results[0]
         print 'Physical length is ', results[1], ' um'

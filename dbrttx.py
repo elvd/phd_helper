@@ -13,13 +13,14 @@ Lbc - collector barrier length in Angstrom
 Outputs:
 E, Tx - transmission probabilty as function of electron energy
 
+Output is returned as a NumPy array, with E and Tx being two rows in it.
+
 Created on Mon Aug 04 13:46:17 2014
 @author: elvd
 
 """
 
 import numpy as np
-import matplotlib.pyplot as plt
 import elvd_tools
 
 
@@ -40,11 +41,11 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     Vw = 0
     Vc = 0
 
-    Tx = np.zeros((NI, 1))
-    E = np.zeros((NI, 1))
+    Tx = []
+    E = []
 
     for n in range(NI):
-        E[n] = (n+1)*de
+        E.append((n+1)*de)
         mult = np.sqrt(2*m*q / (hbar**2))
 
         ke = mult * np.sqrt(Me * (E[n] - Ve))
@@ -75,11 +76,15 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
         T11 = (N11*O11 + N12*O21) * (P11*Q11 + P12*Q21) + \
             (N11*O12 + N12*O22) * (P21*Q11 + P22*Q21)
 
-        Tx[n] = 16 * kc / (ke * (T11 * np.conj(T11)))
+        Tx.append(16 * kc / (ke * (T11 * np.conj(T11))))
 
-    return [E, Tx]
+    E = np.abs(E)
+    Tx = np.abs(Tx)
+
+    return np.array([E, Tx])
 
 if __name__ == '__main__':
+    import matplotlib.pyplot as plt
     fractE = 1.0
     fractC = 1.0
     Lw = 50e-10
@@ -87,14 +92,12 @@ if __name__ == '__main__':
     Lbc = 17e-10
 
     results = dbtx_calc(fractE=fractE, fractC=fractC, Lw=Lw, Lbe=Lbe, Lbc=Lbc)
-#    type(results)
-#    print np.ndim(results)
+    results = results.T
+
     try:
         graph = elvd_tools.custom_plot(results, '', 'Electron energy, [eV]',
                                        'Transmission probability', mode='log')
-    except IndexError:
-        print 'Not enough data'
-
-    plt.savefig('TxE.png')
-
-    plt.show()
+        plt.savefig('TxE.png')
+        plt.show()
+    except IndexError as e:
+        print e.message

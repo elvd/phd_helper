@@ -19,34 +19,36 @@ Created on Tue Aug 05 15:23:28 2014
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+import warnings
 import elvd_tools
 
 
 def genpoly(startdir, degree):
+    warnings.simplefilter('ignore', np.RankWarning)
+
     for dirname, subdirlist, filelist in os.walk(startdir):
-        print 'In folder: %s' % dirname
         os.chdir(dirname)
         gen = (fname for fname in filelist if 'measurement' in fname and
-               '.txt' in fname)
+               os.path.splitext(fname)[1] == '.txt')
 
         for fname in gen:
-            print 'Processing file: %s' % fname
             data = np.loadtxt(fname, skiprows=1)
+            data[:, 1] /= 1e-3  # convert to mA
+
             coeffs = np.polyfit(data[:, 0], data[:, 1], degree)
             fit = np.polyval(coeffs, data[:, 0])
             fit = np.array([data[:, 0], fit])
-#            plt.figure()
-#            plt.plot(data[:, 0], data[:, 1])
-#            plt.plot(data[:, 0], np.polyval(coeffs, data[:, 0]))
-#            plt.xlabel('Voltage, [V]')
-#            plt.ylabel('Current, [mA]')
-#            plt.legend(['Measurement', 'Fit'], loc='upper left')
+            fit = fit.T
             bundle = np.array([data, fit])
+
             try:
-                graph = elvd_tools.custom_plot(data=bundle)
+                elvd_tools.custom_plot(data=bundle, xlabel='Voltage, [V]',
+                                       ylabel='Current, [mA]', mode='linear',
+                                       title='Comparison',
+                                       legend=['Measurement', 'Fit'])
                 plt.savefig(fname+'.png')
-            except IndexError:
-                print 'Not enough data'
+            except IndexError as e:
+                print e.message
 
             coeffs = coeffs[::-1]
             polynom = ['(%e)*((_v1+_v2)^%d)+' % (j, i) for (i, j) in
@@ -64,3 +66,5 @@ if __name__ == '__main__':
     degree = 60
 
     genpoly(startdir, degree)
+
+    plt.close('all')
