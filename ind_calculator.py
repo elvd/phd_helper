@@ -27,13 +27,12 @@ def txline_calc(ind, freq, er, z0l):
     lambda_g = (3e8 / freq) / np.sqrt(er)
     ind *= 1e-12
 
-    cond = 2 * np.pi * ind * freq / z0l
-    if cond > 1:
+    norm_impedance = 2 * np.pi * freq * ind / z0l
+    if norm_impedance > 1:
         raise ValueError('Line impedance too low or frequency too high')
 
     else:
-        l_phys = (lambda_g / (2 * np.pi)) * \
-            np.arcsin(2 * np.pi * ind * freq / z0l)
+        l_phys = (lambda_g / (2 * np.pi)) * np.arcsin(norm_impedance)
 
         l_elec = ((2 * np.pi / lambda_g) * l_phys) * (180 / np.pi)
 

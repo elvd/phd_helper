@@ -34,13 +34,19 @@ def custom_plot(data, xlabel='X axis', ylabel='Y axis', title='Plot title',
 
     if np.ndim(data) == 2:
         if np.size(data, 0) >= np.size(data, 1) and np.size(data, 1) > 1:
-            ax1.plot(data[:, 0], data[:, 1], lw=2)
+            ax1.plot(data[:, 0], data[:, 1], lw=1.5)
+
+            xlim = np.max(np.abs(data[:, 0]))
+            ylim = np.max(np.abs(data[:, 1]))
         else:
             raise IndexError('Incorrect format. Datapoints must be in columns')
     elif np.ndim(data) == 3:
         if np.size(data, 1) >= np.size(data, 2) and np.size(data, 2) > 1:
             for datum in data:
-                ax1.plot(datum[:, 0], datum[:, 1], lw=2)
+                ax1.plot(datum[:, 0], datum[:, 1], lw=1.5)
+
+            xlim = np.max(np.abs(data[:, :, 0]))
+            ylim = np.max(np.abs(data[:, :, 1]))
         else:
             raise IndexError('Incorrect format. Datapoints must be in columns')
     else:
@@ -59,10 +65,18 @@ def custom_plot(data, xlabel='X axis', ylabel='Y axis', title='Plot title',
         ax1.xaxis.set_minor_locator(tkr.AutoMinorLocator(n=2))
         ax1.yaxis.set_minor_locator(tkr.AutoMinorLocator(n=2))
 
-    ax1.grid(which='both', axis='both', color='0.1', ls=':', lw=0.75)
+    ax1.grid(which='both', axis='both', color='0.1', ls=':', lw=0.5)
 
     plt.axhline(y=0, color='0.1', lw=1)
     plt.axvline(x=0, color='0.1', lw=1)
+
+    xlim = np.ceil(xlim)
+    plt.xlim(xmax=xlim)
+    plt.xlim(xmin=(-xlim))
+
+    ylim = np.ceil(ylim)
+    plt.ylim(ymax=ylim)
+    plt.ylim(ymin=(-ylim))
 
     return fig
 

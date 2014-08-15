@@ -31,6 +31,8 @@ def genpoly(startdir, degree):
         gen = (fname for fname in filelist if 'measurement' in fname and
                os.path.splitext(fname)[1] == '.txt')
 
+        polynoms = {}
+
         for fname in gen:
             data = np.loadtxt(fname, skiprows=1)
             data[:, 1] /= 1e-3  # convert to mA
@@ -41,12 +43,17 @@ def genpoly(startdir, degree):
             fit = fit.T
             bundle = np.array([data, fit])
 
+            name, ext = os.path.splitext(fname)
+            name = name.split('_')
+            device_id = name[1] + ' ' + name[2]
+
             try:
                 elvd_tools.custom_plot(data=bundle, xlabel='Voltage, [V]',
                                        ylabel='Current, [mA]', mode='linear',
-                                       title='Comparison',
+                                       title=device_id+' Comparison',
                                        legend=['Measurement', 'Fit'])
-                plt.savefig(fname+'.png')
+                name = '_'.join(name)
+                plt.savefig(name+'.png', dpi=600)
             except IndexError as e:
                 print e.message
 
@@ -55,11 +62,15 @@ def genpoly(startdir, degree):
                        enumerate(coeffs)]
             polynom = ''.join(polynom)  # convert to Agilent ADS SDD format
 
-            with open('autopoly.txt', 'a') as fout:
-                fout.write(fname)
-                fout.write(': \n')
-                fout.write(polynom[:-1])
-                fout.write('\n')
+            polynoms[device_id] = polynom
+
+        if polynoms:
+            with open(dirname+'_autopoly.txt', 'w') as fout:
+                for device, iv in polynoms.items():
+                    fout.write(device)
+                    fout.write(': \n')
+                    fout.write(iv[:-1])
+                    fout.write('\n')
 
 if __name__ == '__main__':
     startdir = r'D:\RTD_measurements'
