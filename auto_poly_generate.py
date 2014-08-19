@@ -29,6 +29,7 @@ def genpoly(startdir, degree):
     for dirname, subdirlist, filelist in os.walk(startdir):
         os.chdir(dirname)
         gen = (fname for fname in filelist if 'measurement' in fname and
+               'autopoly' not in fname and
                os.path.splitext(fname)[1] == '.txt')
 
         polynoms = {}
@@ -37,10 +38,7 @@ def genpoly(startdir, degree):
             data = np.loadtxt(fname, skiprows=1)
             data[:, 1] /= 1e-3  # convert to mA
 
-            coeffs = np.polyfit(data[:, 0], data[:, 1], degree)
-            fit = np.polyval(coeffs, data[:, 0])
-            fit = np.array([data[:, 0], fit])
-            fit = fit.T
+            fit, polynom = elvd_tools.fitpoly(data, degree)
             bundle = np.array([data, fit])
 
             name, ext = os.path.splitext(fname)
@@ -56,11 +54,6 @@ def genpoly(startdir, degree):
                 plt.savefig(name+'.png', dpi=600)
             except IndexError as e:
                 print e.message
-
-            coeffs = coeffs[::-1]
-            polynom = ['(%e)*((_v1+_v2)^%d)+' % (j, i) for (i, j) in
-                       enumerate(coeffs)]
-            polynom = ''.join(polynom)  # convert to Agilent ADS SDD format
 
             polynoms[device_id] = polynom
 

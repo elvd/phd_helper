@@ -17,6 +17,18 @@ A module to hold all auxiliary, all-purpose, functions. Currently implemented:
     Outputs:
         - a matplotlib.pyplot.figure() object.
 
+-fitpoly
+    Purpose: fits an array of [x, y] data to a polynomial of a specified
+    degree. Used to on measured I-V data in order to use it for simulations in
+    Agilent ADS.
+    Inputs:
+        - data: a 2D NumPy array, with x and y data in separate columns.
+        - degree: the desired degree of the fitted polynomial
+    Outputs:
+        - fit: the result of applying the fitted polynomial over the x data.
+        - polynom: a string representation of the fitted polynomial, in format
+        suitable for use in Agilent ADS Symbolically-Defined Device.
+
 Created on Wed Aug 13 16:10:18 2014
 @author: elvd
 """
@@ -24,6 +36,19 @@ Created on Wed Aug 13 16:10:18 2014
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tkr
+
+
+def fitpoly(data, degree):
+    coeffs = np.polyfit(data[:, 0], data[:, 1], degree)
+    fit = np.polyval(coeffs, data[:, 0])
+    fit = np.array([data[:, 0], fit])
+    fit = fit.T
+
+    coeffs = coeffs[::-1]
+    polynom = ['(%e)*((_v1+_v2)^%d)+' % (j, i) for (i, j) in enumerate(coeffs)]
+    polynom = ''.join(polynom)  # convert to Agilent ADS SDD format
+
+    return [fit, polynom]
 
 
 def custom_plot(data, xlabel='X axis', ylabel='Y axis', title='Plot title',
