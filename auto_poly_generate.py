@@ -43,15 +43,20 @@ def genpoly(startdir, degree):
 
             name, ext = os.path.splitext(fname)
             name = name.split('_')
-            device_id = name[1] + ' ' + name[2]
+            device_id = ' '.join(name[1:3])
+            plot_title = ' '.join([device_id, 'Comparison'])
 
             try:
-                elvd_tools.custom_plot(data=bundle, xlabel='Voltage, [V]',
-                                       ylabel='Current, [mA]', mode='linear',
-                                       title=device_id+' Comparison',
+                elvd_tools.custom_plot(data=bundle,
+                                       xlabel='Voltage, [V]',
+                                       ylabel='Current, [mA]',
+                                       mode='linear',
+                                       title=plot_title,
                                        legend=['Measurement', 'Fit'])
                 name = '_'.join(name)
-                plt.savefig(name+'.png', dpi=600)
+                name = '.'.join([name, 'jpg'])
+                plt.savefig(name, dpi=300)
+                plt.close()
             except IndexError as e:
                 print e.message
 
