@@ -90,8 +90,8 @@ def extract_region(data, region='pdr'):
     if np.size(new_data, 0) < np.size(new_data, 1):
         new_data = new_data.T
 
-    local_min_indices = spsig.argrelmin(new_data)
-    local_max_indices = spsig.argrelmax(new_data)
+    local_min_indices = spsig.argrelmin(new_data, order=100)
+    local_max_indices = spsig.argrelmax(new_data, order=100)
 
     local_min_indices = local_min_indices[0]
     local_max_indices = local_max_indices[0]
@@ -112,9 +112,9 @@ def extract_region(data, region='pdr'):
         second_peak = pos_max_indices[0]
         new_data = new_data[first_peak:second_peak, :]
     elif region == 'ndr':
-        first_ndr = new_data[neg_mins_indices[0]:neg_mins_indices[-1], :]
-        second_ndr = new_data[pos_max_indices[0]:pos_max_indices[-1], :]
-        new_data = [first_ndr, second_ndr]
+        first_ndr = new_data[:neg_mins_indices[-1], :]
+        second_ndr = new_data[pos_max_indices[0]:, :]
+        new_data = np.concatenate((first_ndr, second_ndr))
     else:
         raise ValueError('Region should be either pdr or ndr')
 

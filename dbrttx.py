@@ -95,8 +95,10 @@ if __name__ == '__main__':
     results = results.T
 
     try:
-        graph = elvd_tools.custom_plot(results, '', 'Electron energy, [eV]',
-                                       'Transmission probability', mode='log')
+        graph = elvd_tools.custom_plot(data=results, xlabel='',
+                                       ylabel='Electron energy, [eV]',
+                                       title='Transmission probability',
+                                       mode='log')
         plt.savefig('TxE.png')
         plt.show()
     except IndexError as e:

@@ -47,7 +47,7 @@ def fitpoly(data, degree):
     polynom = ['(%e)*((_v1+_v2)^%d)+' % (j, i) for (i, j) in enumerate(coeffs)]
     polynom = ''.join(polynom)  # convert to Agilent ADS SDD format
 
-    return fit, polynom
+    return (fit, polynom)
 
 
 def custom_plot(data, xlabel='X axis', ylabel='Y axis', title='Plot title',

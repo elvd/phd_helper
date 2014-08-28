@@ -21,6 +21,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import warnings
 import elvd_tools
+import iv_manipulate
 
 
 def genpoly(startdir, degree):
@@ -28,15 +29,17 @@ def genpoly(startdir, degree):
 
     for dirname, subdirlist, filelist in os.walk(startdir):
         os.chdir(dirname)
-        gen = (fname for fname in filelist if 'measurement' in fname and
-               'autopoly' not in fname and
-               os.path.splitext(fname)[1] == '.txt')
+        gen = (fname for fname in filelist if
+               os.path.splitext(fname)[1] == '.ivm')
 
         polynoms = {}
 
         for fname in gen:
             data = np.loadtxt(fname, skiprows=1)
             data[:, 1] /= 1e-3  # convert to mA
+            data = iv_manipulate.make_symmetric(data, quadrant='neg')
+#            data = iv_manipulate.extract_region(data, 'pdr')
+#            data = iv_manipulate.scale_iv(data, factor=0.1)
 
             fit, polynom = elvd_tools.fitpoly(data, degree)
             bundle = np.array([data, fit])
@@ -53,9 +56,10 @@ def genpoly(startdir, degree):
                                        mode='linear',
                                        title=plot_title,
                                        legend=['Measurement', 'Fit'])
-                name = '_'.join(name)
+                name = '_'.join(name[1:4])
+                name = '_'.join([name, 'sym_neg'])
                 name = '.'.join([name, 'jpg'])
-                plt.savefig(name, dpi=300)
+                plt.savefig(name, dpi=600)
                 plt.close()
             except IndexError as e:
                 print e.message
@@ -63,7 +67,7 @@ def genpoly(startdir, degree):
             polynoms[device_id] = polynom
 
         if polynoms:
-            with open(dirname+'_autopoly.txt', 'w') as fout:
+            with open(dirname+'_autopoly_sym_neg.txt', 'w') as fout:
                 for device, iv in polynoms.items():
                     fout.write(device)
                     fout.write(': \n')
@@ -71,7 +75,7 @@ def genpoly(startdir, degree):
                     fout.write('\n')
 
 if __name__ == '__main__':
-    startdir = r'D:\RTD_measurements'
+    startdir = r'D:\RTD_modified_iv\N1014'
     degree = 60
 
     genpoly(startdir, degree)
