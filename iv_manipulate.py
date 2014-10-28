@@ -41,10 +41,10 @@ def make_symmetric(data, quadrant='pos'):
     if np.ndim(data) != 2:
         raise IndexError('Incorrect data format')
 
-    new_data = data.copy()
+    new_data = data.copy()  # do not change original data
 
     if np.size(new_data, 0) < np.size(new_data, 1):
-        new_data = new_data.T
+        new_data = new_data.T  # make sure data is in columns
 
     if quadrant == 'pos':
         elements_mask = np.where(new_data[:, 0] >= 0.0)
@@ -71,10 +71,10 @@ def scale_iv(data, factor):
     if np.ndim(data) != 2:
         raise IndexError('Incorrect data format')
 
-    new_data = data.copy().astype(type(factor))
+    new_data = data.copy().astype(type(factor))  # need to change to float
 
     if np.size(new_data, 0) < np.size(new_data, 1):
-        new_data = new_data.T
+        new_data = new_data.T  # make sure data is in columns
 
     new_data[:, 1] *= factor
 
@@ -88,11 +88,13 @@ def extract_region(data, region='pdr'):
     new_data = data.copy()
 
     if np.size(new_data, 0) < np.size(new_data, 1):
-        new_data = new_data.T
+        new_data = new_data.T  # make sure data is in columns
 
+    # find local minima and maxima
     local_min_indices = spsig.argrelmin(new_data, order=100)
     local_max_indices = spsig.argrelmax(new_data, order=100)
 
+    # extract indices from returned data structure
     local_min_indices = local_min_indices[0]
     local_max_indices = local_max_indices[0]
 

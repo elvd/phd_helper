@@ -1,34 +1,47 @@
 # -*- coding: utf-8 -*-
-"""
-A Python translation of a Matlab script to calculate electron transmission
-probability for a GaAs/AlGaAs Resonant-Tunneling Diode.
-
-Input parameters:
-fractE - Mole fraction of Aluminium in emitter barrier
-fractC - Mole fraction of Aluminium in collector barrier
-Lw - well length in Angstrom
-Lbe - emitter barrier length in Angstrom
-Lbc - collector barrier length in Angstrom
-
-Outputs:
-E, Tx - transmission probabilty as function of electron energy
-
-Output is returned as a NumPy array, with E and Tx being two rows in it.
-
-Created on Mon Aug 04 13:46:17 2014
-@author: elvd
-
-"""
-
 import numpy as np
 import elvd_tools
 
 
 def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
+    """
+    A Python translation of a Matlab script to calculate electron transmission
+    probability for a GaAs/AlGaAs Resonant-Tunneling Diode.
+
+    Parameters:
+    -----------
+    fractE : float
+        Mole fraction of Aluminium in emitter barrier.
+    fractC : float
+        Mole fraction of Aluminium in collector barrier.
+    Lw : float
+        Well length in Angstroms.
+    Lbe : float
+        Emitter barrier length in Angstroms.
+    Lbc : float
+        Collector barrier length in Angstroms.
+
+    Returns:
+    --------
+    E : array_like
+        Electron energy levels for which the transmission probability `Tx` has
+        been calculated.
+    Tx : array_like
+        Transmission probabilty as function of electron energy.
+
+    Notes:
+    ------
+    Output is returned as a NumPy array, with E and Tx being two rows in it.
+
+    Created on Mon Aug 04 13:46:17 2014
+    @author: elvd
+
+    """
+
     m = 0.91e-30  # effective electron mass
     hbar = 1.06e-34  # Planck's constant
     q = 1.6e-19  # Electron charge
-    NI = 25000
+    NI = 25000  # number of steps
     Mw = 0.067
     Me = Mw
     Mc = Mw
@@ -41,6 +54,7 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     Vw = 0
     Vc = 0
 
+    # initialise empty lists
     Tx = []
     E = []
 
@@ -81,7 +95,7 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     E = np.abs(E)
     Tx = np.abs(Tx)
 
-    return np.array([E, Tx])
+    return np.array([E, Tx])  # combined in a numpy array
 
 if __name__ == '__main__':
     import matplotlib.pyplot as plt

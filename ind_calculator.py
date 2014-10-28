@@ -1,31 +1,52 @@
 # -*- coding: utf-8 -*-
-"""
-A quick script to calculate the parameters of a transmission line, used to
-represent an inductive element.
-
-Input parameters:
-ind - inductance in pH
-freq - centre frequency in GHz
-er - effective dielectric constant of substrate material
-z0l - desired impedance of the transmission line
-
-Outputs:
-l_elec - electrical length of an ideal transmission line
-l_phys - physical length, in um
-c_par - parasitic capacitance, in fF
-
-Created on Wed Jun 25 16:20:35 2014
-@author: elvd
-
-"""
-
 import numpy as np
 
 
 def txline_calc(ind, freq, er, z0l):
+    """
+    A quick script to calculate the parameters of a transmission line, used to
+    represent an inductive element.
+
+    Parameters:
+    -----------
+    ind : float
+        Value of inductance in pH.
+    freq : float
+        Centre frequency in GHz.
+    er : float
+        Effective dielectric constant of substrate material.
+    z0l : float
+        Desired impedance of the transmission line.
+
+    Returns:
+    --------
+    l_elec : float
+        Electrical length of an ideal transmission line, used to represent the
+        inductance `ind`.
+    l_phys : float
+        Corresponding hysical length in um.
+    c_par : float
+        Total parasitic capacitance in fF.
+
+    Raises:
+    -------
+    ValueError
+        In case requestd inductance cannot be formed using a line of the
+        specified impedance and/or the frequency specified is too high.
+
+    Notes:
+    ------
+    Created on Wed Jun 25 16:20:35 2014
+    @author: elvd
+
+    """
+
+    # convert to basic units, i.e. Hz and H
     freq *= 1e9
-    lambda_g = (3e8 / freq) / np.sqrt(er)
     ind *= 1e-12
+
+    # calculate guide wavelength
+    lambda_g = (3e8 / freq) / np.sqrt(er)
 
     norm_impedance = 2 * np.pi * freq * ind / z0l
     if norm_impedance > 1:
@@ -39,10 +60,11 @@ def txline_calc(ind, freq, er, z0l):
         c_par = (1 / (2 * np.pi * z0l * freq)) * \
             np.tan(np.pi * l_phys / lambda_g)
 
+        # convert to output units
         l_phys *= 1e-6
         c_par *= 1e-15
 
-    return [l_elec, l_phys, c_par]
+    return [l_elec, l_phys, c_par]  # returns as a list
 
 if __name__ == '__main__':
     freq = raw_input('Enter frequency in GHz: ')

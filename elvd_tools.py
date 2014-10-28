@@ -19,7 +19,7 @@ A module to hold all auxiliary, all-purpose, functions. Currently implemented:
 
 -fitpoly
     Purpose: fits an array of [x, y] data to a polynomial of a specified
-    degree. Used to on measured I-V data in order to use it for simulations in
+    degree. Used on measured I-V data in order to use it for simulations in
     Agilent ADS.
     Inputs:
         - data: a 2D NumPy array, with x and y data in separate columns.
