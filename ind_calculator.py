@@ -24,14 +24,14 @@ def txline_calc(ind, freq, er, z0l):
         Electrical length of an ideal transmission line, used to represent the
         inductance `ind`.
     l_phys : float
-        Corresponding hysical length in um.
+        Corresponding physical length in um.
     c_par : float
         Total parasitic capacitance in fF.
 
     Raises:
     -------
     ValueError
-        In case requestd inductance cannot be formed using a line of the
+        In case requested inductance cannot be formed using a line of the
         specified impedance and/or the frequency specified is too high.
 
     Notes:

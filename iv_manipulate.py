@@ -1,33 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Functions to manipulate and modify measurement data for RTD current-voltage
-characteristics. Contains three functions:
-- make_symmetric
-    Purpose: makes an I-V and makes it anti-symmetric, i.e. odd with respect to
-    the origin, by taking one half of the I-V and rotating it around the
-    origin.
-    Inputs:
-        - data: measurement data, consisting of x-y datapoints.
-        - quadrant: 'pos' or 'neg' accepted, selects which half to use.
-    Outputs:
-        - new_data: a NumPy array.
-- scale_iv
-    Purpose: scales an I-V by multiplying they measured y data by a factor.
-    Performs a type conversion before scaling.
-    Inputs:
-        - data: measurement data, consisting of x-y datapoints.
-        - factor: factor by which to scale, no restrictions on number.
-    Outputs:
-        - new_data: a NumPy array.
-- extract_region:
-    Purpose: extracts a part of the measured I-V that is of interest. Possible
-    regions are either the initial Positive Differential Resistance one, or the
-    Negative Differential Resistance regions plus the second PDR regions.
-    Inputs:
-        - data: measurement data, consisting of x-y datapoints.
-        - region: 'pdr' or 'ndr' accepted, selects which region to be returned.
-    Outputs:
-        - new_data: a NumPy array
+characteristics.
 
 Created on Tue Aug 19 17:01:45 2014
 @author: elvd
@@ -38,7 +12,39 @@ import scipy.signal as spsig
 
 
 def make_symmetric(data, quadrant='pos'):
-    if np.ndim(data) != 2:
+    """
+    Takes an I-V and makes it anti-symmetric, i.e. odd, with respect to
+    the origin, by taking one half of the I-V and rotating it around the
+    origin.
+
+    Parameters:
+    -----------
+    data : numpy.ndarray
+        I-V data of one device.
+    quadrant : {'pos', 'neg'}, optional
+        Signifies which quadrant is to be used for 'symmetrising' the I-V.
+
+    Returns:
+    --------
+    new_data : numpy.ndarray
+        The newly symmetric I-V, with datapoints in different rows.
+
+    Raises:
+    -------
+    IndexError
+        In case the data array has more than 2 dimensions, i.e. data for more
+        than one device.
+    ValueError
+        In case an invalid parameter is specified for the `quadrant` variable.
+
+    Notes:
+    ------
+    Requires an installation of NumPy. Data is returned as an array, further
+    processing is up to calling function.
+
+    """
+
+    if np.ndim(data) != 2:  # only process one IV dataset at a time
         raise IndexError('Incorrect data format')
 
     new_data = data.copy()  # do not change original data
@@ -68,10 +74,41 @@ def make_symmetric(data, quadrant='pos'):
 
 
 def scale_iv(data, factor):
-    if np.ndim(data) != 2:
+    """
+    Scales an I-V by multiplying they measured `y` data by a factor.
+    Performs a type conversion before scaling.
+
+    Parameters:
+    -----------
+    data : numpy.ndarray
+        I-V data of one device.
+    factor : float
+        The factor by which to scale the I-V.
+
+    Returns:
+    --------
+    new_data : numpy.ndarray
+        The newly scaled I-V, with datapoints in different rows.
+
+    Raises:
+    -------
+    IndexError
+        In case the data array has more than 2 dimensions, i.e. data for more
+        than one device.
+
+    Notes:
+    ------
+    Requires an installation of NumPy. Data is returned as an array, further
+    processing is up to calling function.
+    Variable `factor` should be [0, Inf).
+
+    """
+
+    if np.ndim(data) != 2:  # only process one IV dataset at a time
         raise IndexError('Incorrect data format')
 
-    new_data = data.copy().astype(type(factor))  # need to change to float
+    # match data types for float multiplication/division
+    new_data = data.copy().astype(float)
 
     if np.size(new_data, 0) < np.size(new_data, 1):
         new_data = new_data.T  # make sure data is in columns
@@ -82,10 +119,50 @@ def scale_iv(data, factor):
 
 
 def extract_region(data, region='pdr'):
-    if np.ndim(data) != 2:
+    """
+    Extracts a part of the measured I-V that is of interest. Possible
+    regions are either the initial Positive Differential Resistance one, or the
+    Negative Differential Resistance regions plus the second PDR regions.
+
+    Parameters:
+    -----------
+    data : numpy.ndarray
+        I-V data of one device.
+    region : {'pdr', 'ndr'}, optional
+        Which region of the RTD's I-V to extract.
+
+    Returns:
+    --------
+    new_data : numpy.ndarray
+        The extracted region, with datapoints in different rows.
+
+    Raises:
+    -------
+    IndexError
+        In case the data array has more than 2 dimensions, i.e. data for more
+        than one device.
+    ValueError
+        In case an invalid parameter is specified for the `region` variable.
+
+    Notes:
+    ------
+    Requires an installation of NumPy and SciPy. Data is returned as an array,
+    further processing is up to calling function.
+    Region extraction works in the following way. First, local minima and
+    maxima are identified and their `x` values saved, going from smallest to
+    largest. Using those, the 'pdr' region is defined as the data between the
+    last minimum before `x` = 0, and the first maximum after `x` = 0.
+    When extracting the 'ndr' region, two parts of the I-V are actually
+    concatenated together. The first part spans from the value with smallest
+    `x` component to the last minimum before `x` = 0; and the second part is
+    from the first maximum after `x` = 0, up to the value with largest `x`.
+
+    """
+
+    if np.ndim(data) != 2:  # only process one IV dataset at a time
         raise IndexError('Incorrect data format')
 
-    new_data = data.copy()
+    new_data = data.copy()  # do not change original data
 
     if np.size(new_data, 0) < np.size(new_data, 1):
         new_data = new_data.T  # make sure data is in columns
@@ -101,6 +178,7 @@ def extract_region(data, region='pdr'):
     local_min_values = new_data[local_min_indices]
     local_max_values = new_data[local_max_indices]
 
+    # split into extrema in I and III quadrant
     neg_mins_indices = np.where(local_min_values[:, 0] <= 0.0)
     neg_mins_indices = neg_mins_indices[0]
     neg_mins_indices = local_min_indices[neg_mins_indices]
