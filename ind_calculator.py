@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import numpy as np
 
 
@@ -37,8 +36,17 @@ def txline_calc(ind, freq, er, z0l):
 
     Notes:
     ------
+    Requires an installation of NumPy. Pretty display of results is up to
+    calling function.
+
     Created on Wed Jun 25 16:20:35 2014
     @author: elvd
+
+    Example:
+    --------
+    >>>results=txline_calc(225, 50, 10.2, 100)
+    >>>print results
+    [44.979873297640133, 2.3472907724095448e-10, 1.3178277694076776e-29]
 
     """
 

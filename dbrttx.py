@@ -32,6 +32,7 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     Notes:
     ------
     Output is returned as a NumPy array, with E and Tx being two rows in it.
+    Calling function is responsible for graphically displaying the result.
 
     Created on Mon Aug 04 13:46:17 2014
     @author: elvd
