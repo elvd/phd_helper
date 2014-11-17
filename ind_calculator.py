@@ -2,7 +2,7 @@
 import numpy as np
 
 
-def txline_calc(ind, freq, er, z0l):
+def tline_ind(ind, freq, er, z0l):
     """
     A quick script to calculate the parameters of a transmission line, used to
     represent an inductive element.
@@ -39,14 +39,15 @@ def txline_calc(ind, freq, er, z0l):
     Requires an installation of NumPy. Pretty display of results is up to
     calling function.
 
-    Created on Wed Jun 25 16:20:35 2014
-    @author: elvd
-
     Example:
     --------
-    >>>results=txline_calc(225, 50, 10.2, 100)
-    >>>print results
+    >>> import ind_calculator
+    >>> results = ind_calculator.tline_ind(225, 50, 10.2, 100)
+    >>> print results
     [44.979873297640133, 2.3472907724095448e-10, 1.3178277694076776e-29]
+
+    Created on Wed Jun 25 16:20:35 2014
+    @author: Viktor Doychinov
 
     """
 
@@ -76,22 +77,4 @@ def txline_calc(ind, freq, er, z0l):
     return [l_elec, l_phys, c_par]  # returns as a list
 
 if __name__ == '__main__':
-    freq = raw_input('Enter frequency in GHz: ')
-    freq = float(freq)
-    ind = raw_input('Enter inductance in pH: ')
-    ind = float(ind)
-    er = raw_input('Enter effective dielectric constant: ')
-    er = float(er)
-    z0l = raw_input('Enter transmission line impedance: ')
-    z0l = float(z0l)
-
-# needs better input sanitisation
-
-    try:
-        results = txline_calc(ind=ind, freq=freq, er=er, z0l=z0l)
-    except ValueError as e:
-        print e.message
-    else:
-        print 'Electrical length is ', results[0]
-        print 'Physical length is ', results[1], ' um'
-        print 'Parasitic capacitance is ', results[2], ' fF'
+    print tline_ind.__doc__

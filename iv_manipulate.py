@@ -3,8 +3,20 @@
 Functions to manipulate and modify measurement data for RTD current-voltage
 characteristics.
 
+Functions contained in module.
+------------------------------
+- make_symmetric(data, quadrant)
+- scale(data, factor)
+- extract_region(data, region)
+
+Individual documentation can be accessed by using the following commands:
+>>> import iv_manipulate
+>>> print iv_manipulate.<function_name>.__doc__  # or
+>>> help(iv_manipulate.<function_name>)
+
 Created on Tue Aug 19 17:01:45 2014
-@author: elvd
+@author: Viktor Doychinov
+
 """
 
 import numpy as np
@@ -47,10 +59,10 @@ def make_symmetric(data, quadrant='pos'):
     if np.ndim(data) != 2:  # only process one IV dataset at a time
         raise IndexError('Incorrect data format')
 
-    new_data = data.copy()  # do not change original data
+    if np.size(data, 0) < np.size(data, 1):
+        data = data.T  # make sure data is in columns
 
-    if np.size(new_data, 0) < np.size(new_data, 1):
-        new_data = new_data.T  # make sure data is in columns
+    new_data = data.copy()  # do not change original data
 
     if quadrant == 'pos':
         elements_mask = np.where(new_data[:, 0] >= 0.0)
@@ -73,7 +85,7 @@ def make_symmetric(data, quadrant='pos'):
     return new_data
 
 
-def scale_iv(data, factor):
+def scale(data, factor):
     """
     Scales an I-V by multiplying they measured `y` data by a factor.
     Performs a type conversion before scaling.
@@ -107,11 +119,11 @@ def scale_iv(data, factor):
     if np.ndim(data) != 2:  # only process one IV dataset at a time
         raise IndexError('Incorrect data format')
 
+    if np.size(data, 0) < np.size(data, 1):
+        data = data.T  # make sure data is in columns
+
     # match data types for float multiplication/division
     new_data = data.copy().astype(float)
-
-    if np.size(new_data, 0) < np.size(new_data, 1):
-        new_data = new_data.T  # make sure data is in columns
 
     new_data[:, 1] *= factor
 
@@ -162,10 +174,10 @@ def extract_region(data, region='pdr'):
     if np.ndim(data) != 2:  # only process one IV dataset at a time
         raise IndexError('Incorrect data format')
 
-    new_data = data.copy()  # do not change original data
+    if np.size(data, 0) < np.size(data, 1):
+        data = data.T  # make sure data is in columns
 
-    if np.size(new_data, 0) < np.size(new_data, 1):
-        new_data = new_data.T  # make sure data is in columns
+    new_data = data.copy()  # do not change original data
 
     # find local minima and maxima
     local_min_indices = spsig.argrelmin(new_data, order=100)
@@ -199,3 +211,6 @@ def extract_region(data, region='pdr'):
         raise ValueError('Region should be either pdr or ndr')
 
     return new_data
+
+if __name__ == '__main__':
+    print __doc__

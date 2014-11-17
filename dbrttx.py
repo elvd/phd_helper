@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import numpy as np
-import elvd_tools
 
 
 def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
@@ -33,6 +32,29 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     ------
     Output is returned as a NumPy array, with E and Tx being two rows in it.
     Calling function is responsible for graphically displaying the result.
+
+    Example:
+    --------
+    >>> import matplotlib.pyplot as plt
+    >>> import dbrttx
+    >>> import elvd_tools
+    >>> fractE = 1.0
+    >>> fractC = 1.0
+    >>> Lw = 50e-10
+    >>> Lbe = 17e-10
+    >>> Lbc = 17e-10
+    >>> results = dbrttx.dbtx_calc(fractE=fractE, fractC=fractC, Lw=Lw,
+                                   Lbe=Lbe, Lbc=Lbc)
+    >>> results = results.T
+    >>> try:
+    ...     graph = elvd_tools.custom_plot(data=results, xlabel='',
+                                           ylabel='Electron energy, [eV]',
+                                           title='Transmission probability',
+                                           mode='log')
+    ...     plt.savefig('TxE.png')
+    ...     plt.show()
+    ... except IndexError as e:
+    ...     print e.message
 
     Created on Mon Aug 04 13:46:17 2014
     @author: elvd
@@ -99,22 +121,4 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     return np.array([E, Tx])  # combined in a numpy array
 
 if __name__ == '__main__':
-    import matplotlib.pyplot as plt
-    fractE = 1.0
-    fractC = 1.0
-    Lw = 50e-10
-    Lbe = 17e-10
-    Lbc = 17e-10
-
-    results = dbtx_calc(fractE=fractE, fractC=fractC, Lw=Lw, Lbe=Lbe, Lbc=Lbc)
-    results = results.T
-
-    try:
-        graph = elvd_tools.custom_plot(data=results, xlabel='',
-                                       ylabel='Electron energy, [eV]',
-                                       title='Transmission probability',
-                                       mode='log')
-        plt.savefig('TxE.png')
-        plt.show()
-    except IndexError as e:
-        print e.message
+    print dbtx_calc.__doc__
