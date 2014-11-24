@@ -57,7 +57,6 @@ def tline_ind(ind, freq, er, z0l):
 
     # calculate guide wavelength
     lambda_g = (3e8 / freq) / np.sqrt(er)
-
     norm_impedance = 2 * np.pi * freq * ind / z0l
     if norm_impedance > 1:
         raise ValueError('Line impedance too low or frequency too high')
