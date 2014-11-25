@@ -5,9 +5,9 @@ in order to ensure compatibility with BiBTeX bibliography management.
 
 Functions contained in module.
 ------------------------------
-- add_label(record)
+- add_label(record, record_id)
 - write_record(output_file, record)
-- process_file(input_file, output_file)  # not yet implemented
+- process_file(inp_fname, out_fname)
 
 Individual documentation can be accessed by using the following commands:
 >>> import add_label_ref
@@ -20,7 +20,7 @@ Created on Wed Nov 19 15:59:49 2014
 """
 
 
-def add_label(record):
+def add_label(record, record_id):
     """
     Appends a label field to a RIS record. Label field corresponds to a `%F`
     line in the RIS record.
@@ -30,6 +30,8 @@ def add_label(record):
     record : list of lists
         A list of lists, containing the different fields for a single reference
         record.
+    record_id : str
+        A unique identifier, to be added to the Label field value.
 
     Notes:
     ------
@@ -37,14 +39,12 @@ def add_label(record):
     provide a unique id.
 
     """
-    global record_id
     for item in record:
         if '%F' in item:
             break
     else:
         # need to get  rid of magic value `Mixer`
         label = ''.join(['Mixer', str(record_id), '\n'])
-        record_id = record_id + 1
         record.append(['%F', label])
 
 
@@ -69,35 +69,59 @@ def write_record(output_file, record):
         line_new = ' '.join(item)
         output_file.write(line_new)
 
-    output_file.write('\n\n\n')
+    output_file.write('\n\n\n')  # record delimeter
 
 
-fname_in = r'All_References.txt'
-fname_out = r'All_References_Processed.txt'
+def process_file(inp_fname, out_fname):
+    """
+    Processes all RIS records in a given input file, appends Label fields, and
+    writes them out to a given output file.
 
-counter = 0
-record_id = 1
+    Parameters:
+    -----------
+    inp_fname : str
+        Input filename.
+    out_fname : str
+        Output filename.
 
-record_parameters = list()
+    Notes:
+    ------
+    Filenames must include absolute path, if they are in a different location
+    than the script.
 
-with open(fname_in, 'rt') as file_in, open(fname_out, 'wt') as file_out:
-    for line in file_in:
+    Example:
+    --------
+    >>> import add_label_ref
+    >>> fname_in = r'references.txt'
+    >>> fname_out = r'references_labels.txt'
+    >>> add_label_ref.process_file(fname_in, fname_out)
 
-        if counter >= 3:
-            counter = 0
+    """
+    counter = 0
+    record_id = 1
+    record_parameters = list()
 
-            add_label(record_parameters)
-            write_record(file_out, record_parameters)
+    with open(inp_fname, 'rt') as file_in, open(out_fname, 'wt') as file_out:
+        for line in file_in:
+            if counter >= 3:
+                counter = 0
 
-            record_parameters = list()
+                add_label(record_parameters, record_id)
+                record_id = record_id + 1
+                write_record(file_out, record_parameters)
 
-        if line.startswith('\n'):
-            counter = counter + 1
-            continue
+                record_parameters = list()
 
-        record_parameters.append(line.split(' ', 1))
+            if line.startswith('\n'):
+                counter = counter + 1
+                continue
 
-    else:
-        if record_parameters:
-            add_label(record_parameters)
-            write_record(file_out, record_parameters)
+            record_parameters.append(line.split(' ', 1))
+
+        else:
+            if record_parameters:
+                add_label(record_parameters, record_id)
+                write_record(file_out, record_parameters)
+
+if __name__ == '__main__':
+    print __doc__
