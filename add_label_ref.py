@@ -20,7 +20,7 @@ Created on Wed Nov 19 15:59:49 2014
 """
 
 
-def add_label(record, record_id):
+def add_label(record, label_seed, record_id):
     """
     Appends a label field to a RIS record. Label field corresponds to a `%F`
     line in the RIS record.
@@ -30,21 +30,22 @@ def add_label(record, record_id):
     record : list of lists
         A list of lists, containing the different fields for a single reference
         record.
+    label_seed : str
+        Forms the base of the label. the `record_id` is concatenated with it
+        to come up with a truly unique identifier.
     record_id : str
         A unique identifier, to be added to the Label field value.
 
     Notes:
     ------
-    Modifies the list in-place. The `record_id` variable is a global, so as to
-    provide a unique id.
+    Modifies the list in-place.
 
     """
     for item in record:
         if '%F' in item:
             break
     else:
-        # need to get  rid of magic value `Mixer`
-        label = ''.join(['Mixer', str(record_id), '\n'])
+        label = ''.join([label_seed, str(record_id), '\n'])
         record.append(['%F', label])
 
 
@@ -98,6 +99,7 @@ def process_file(inp_fname, out_fname):
 
     """
     counter = 0
+    label_seed = 'Mixer'
     record_id = 1
     record_parameters = list()
 
@@ -106,7 +108,7 @@ def process_file(inp_fname, out_fname):
             if counter >= 3:
                 counter = 0
 
-                add_label(record_parameters, record_id)
+                add_label(record_parameters, label_seed, record_id)
                 record_id = record_id + 1
                 write_record(file_out, record_parameters)
 
@@ -120,7 +122,7 @@ def process_file(inp_fname, out_fname):
 
         else:
             if record_parameters:
-                add_label(record_parameters, record_id)
+                add_label(record_parameters, label_seed, record_id)
                 write_record(file_out, record_parameters)
 
 if __name__ == '__main__':
