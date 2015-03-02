@@ -70,8 +70,8 @@ def tline_ind(ind, freq, er, z0l):
             np.tan(np.pi * l_phys / lambda_g)
 
         # convert to output units
-        l_phys *= 1e-6
-        c_par *= 1e-15
+        l_phys /= 1e-6
+        c_par /= 1e-15
 
     return [l_elec, l_phys, c_par]  # returns as a list
 
