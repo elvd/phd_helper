@@ -40,9 +40,9 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     >>> import elvd_tools
     >>> fractE = 1.0
     >>> fractC = 1.0
-    >>> Lw = 50e-10
-    >>> Lbe = 17e-10
-    >>> Lbc = 17e-10
+    >>> Lw = 50
+    >>> Lbe = 17
+    >>> Lbc = 17
     >>> results = dbrttx.dbtx_calc(fractE=fractE, fractC=fractC, Lw=Lw,
                                    Lbe=Lbe, Lbc=Lbc)
     >>> results = results.T
@@ -60,6 +60,16 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     @author: elvd
 
     """
+
+    fractE = float(fractE)
+    fractC = float(fractC)
+    Lw = float(Lw)
+    Lbe = float(Lbe)
+    Lbc = float(Lbc)
+
+    Lw *= 1e-10
+    Lbe *= 1e-10
+    Lbc *= 1e-10
 
     m = 0.91e-30  # effective electron mass
     hbar = 1.06e-34  # Planck's constant

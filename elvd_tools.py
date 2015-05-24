@@ -180,7 +180,7 @@ def custom_plot(data, xlabel='X axis', ylabel='Y axis', title='Plot title',
 
     plt.rc('font', family='serif')
 
-    plt.rc('legend', fontsize=10)
+    plt.rc('legend', fontsize=12)
     plt.rc('axes', titlesize=14)
     plt.rc('axes', labelsize=12)
     plt.rc('xtick', labelsize=12)

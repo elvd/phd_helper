@@ -35,7 +35,7 @@ import elvd_tools
 import iv_manipulate
 
 
-startdir = r'D:\RTD_modified_iv_2'
+startdir = r'D:\projects\phd_helper\rtd\hamza'
 degree = 60
 
 warnings.simplefilter('ignore', np.RankWarning)
@@ -51,8 +51,8 @@ for dirname, subdirlist, filelist in os.walk(startdir):
         data = np.loadtxt(fname, skiprows=1)
         data[:, 1] /= 1e-3  # convert to mA
         data = iv_manipulate.make_symmetric(data, quadrant='neg')
-#            data = iv_manipulate.extract_region(data, 'pdr')
-#            data = iv_manipulate.scale_iv(data, factor=0.1)
+        data = iv_manipulate.extract_region(data, 'pdr')
+        data = iv_manipulate.scale_iv(data, factor=0.1)
 
         fit, coeffs = elvd_tools.fit_poly(data, degree)
         polynom = elvd_tools.poly_to_ads_string(coeffs)
@@ -61,18 +61,17 @@ for dirname, subdirlist, filelist in os.walk(startdir):
         name, ext = os.path.splitext(fname)
         name = name.split('_')
         device_id = ' '.join(name[1:3])
-        plot_title = ' '.join([device_id, 'Comparison'])
+        plot_title = ' '.join([device_id, 'sample', name[3]])
 
         try:
-            elvd_tools.custom_plot(data=bundle,
+            elvd_tools.custom_plot(data=data,
                                    xlabel='Voltage, [V]',
                                    ylabel='Current, [mA]',
                                    mode='linear',
-                                   title=plot_title,
-                                   legend=['Measurement', 'Fit'])
+                                   title=plot_title)
             name = '_'.join(name[1:4])
             name = '_'.join([name, 'sym_neg'])
-            name = '.'.join([name, 'png'])
+            name = '.'.join([name, 'jpg'])
             plt.savefig(name, dpi=600)
             plt.close()
         except IndexError as e:
