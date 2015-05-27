@@ -19,6 +19,7 @@ Created on Tue Aug 19 17:01:45 2014
 
 """
 
+from __future__ import print_function
 import numpy as np
 import scipy.signal as spsig
 
@@ -213,4 +214,4 @@ def extract_region(data, region='pdr'):
     return new_data
 
 if __name__ == '__main__':
-    print __doc__
+    print(__doc__)

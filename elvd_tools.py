@@ -19,6 +19,7 @@ Created on Wed Aug 13 16:10:18 2014
 
 """
 
+from __future__ import print_function
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -189,4 +190,4 @@ def custom_plot(data, xlabel='X axis', ylabel='Y axis', title='Plot title',
     return fig
 
 if __name__ == '__main__':
-    print __doc__
+    print(__doc__)

@@ -18,6 +18,7 @@ Created on Wed Nov 19 15:59:49 2014
 @author: elvd
 
 """
+from __future__ import print_function
 
 
 def add_label(record, label_seed, record_id):
@@ -31,7 +32,7 @@ def add_label(record, label_seed, record_id):
         A list of lists, containing the different fields for a single reference
         record.
     label_seed : str
-        Forms the base of the label. the `record_id` is concatenated with it
+        Forms the base of the label. The `record_id` is concatenated with it
         to come up with a truly unique identifier.
     record_id : str
         A unique identifier, to be added to the Label field value.
@@ -73,7 +74,7 @@ def write_record(output_file, record):
     output_file.write('\n\n\n')  # record delimeter
 
 
-def process_file(inp_fname, out_fname):
+def process_file(inp_fname, out_fname, label_seed):
     """
     Processes all RIS records in a given input file, appends Label fields, and
     writes them out to a given output file.
@@ -84,6 +85,8 @@ def process_file(inp_fname, out_fname):
         Input filename.
     out_fname : str
         Output filename.
+    label_seed : str
+        Forms the base of the label.
 
     Notes:
     ------
@@ -95,11 +98,11 @@ def process_file(inp_fname, out_fname):
     >>> import add_label_ref
     >>> fname_in = r'references.txt'
     >>> fname_out = r'references_labels.txt'
-    >>> add_label_ref.process_file(fname_in, fname_out)
+    >>> label_seed = 'Mixer'
+    >>> add_label_ref.process_file(fname_in, fname_out, label_seed)
 
     """
     counter = 0
-    label_seed = 'Mixer'
     record_id = 1
     record_parameters = list()
 
@@ -126,4 +129,4 @@ def process_file(inp_fname, out_fname):
                 write_record(file_out, record_parameters)
 
 if __name__ == '__main__':
-    print __doc__
+    print(__doc__)

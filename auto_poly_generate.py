@@ -27,6 +27,7 @@ Created on Tue Aug 05 15:23:28 2014
 
 """
 
+from __future__ import print_function
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -45,7 +46,7 @@ for dirname, subdirlist, filelist in os.walk(startdir):
     gen = (fname for fname in filelist if
            os.path.splitext(fname)[1] == '.ivm')
 
-    polynoms = {}
+    polynoms = dict()
 
     for fname in gen:
         data = np.loadtxt(fname, skiprows=1)
@@ -75,7 +76,7 @@ for dirname, subdirlist, filelist in os.walk(startdir):
             plt.savefig(name, dpi=600)
             plt.close()
         except IndexError as e:
-            print e.message
+            print(e.message)
 
         polynoms[device_id] = polynom
 

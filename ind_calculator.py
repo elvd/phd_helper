@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import print_function
 import numpy as np
 
 
@@ -76,4 +77,4 @@ def tline_ind(ind, freq, er, z0l):
     return [l_elec, l_phys, c_par]  # returns as a list
 
 if __name__ == '__main__':
-    print tline_ind.__doc__
+    print(tline_ind.__doc__)

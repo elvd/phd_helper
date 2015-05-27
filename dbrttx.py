@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from __future__ import print_function
 import numpy as np
 
 
@@ -88,8 +89,8 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     Vc = 0
 
     # initialise empty lists
-    Tx = []
-    E = []
+    Tx = list()
+    E = list()
 
     for n in range(NI):
         E.append((n+1)*de)
@@ -131,4 +132,4 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     return np.array([E, Tx])  # combined in a numpy array
 
 if __name__ == '__main__':
-    print dbtx_calc.__doc__
+    print(dbtx_calc.__doc__)
