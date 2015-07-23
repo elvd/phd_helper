@@ -143,7 +143,7 @@ def custom_plot(data, xlabel='X axis', ylabel='Y axis', title='Plot title',
     fig = plt.figure()
     ax1 = fig.add_subplot(111)  # just one plot
     # different colours for the different datasets
-    ax1.set_color_cycle(['r', 'k', 'b', 'g', 'c'])
+    ax1.set_color_cycle(['r', 'k', 'b', 'g', 'c', 'm'])
 
     if np.ndim(data) == 2:  # one set of data
         if np.size(data, 0) >= np.size(data, 1) and np.size(data, 1) > 1:
@@ -166,7 +166,7 @@ def custom_plot(data, xlabel='X axis', ylabel='Y axis', title='Plot title',
     ax1.set_title(title)
 
     if legend is not None:
-        ax1.legend(legend, loc='upper left')
+        ax1.legend(legend, loc='lower left')
 
     # cosmetic stuff, make it look pretty
     ax1.set_axisbelow(True)

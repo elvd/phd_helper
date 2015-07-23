@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<figures>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+            <item>2</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n4_l938_d1_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l938_d2_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l938_d3_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l938_d4_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l938_d5_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L938 Devices, additional stubs</title>
+            <title subgraph='1'>L938 Devices, HFSS circuit</title>
+            <title subgraph='2'>L938 Devices, standard circuit</title>
+            <legend>
+                <entry>D1</entry>
+                <entry>D2</entry>
+                <entry>D3</entry>
+                <entry>D4</entry>
+                <entry>D5</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+            <item>2</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n4_l939_d1_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l939_d2_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l939_d3_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l939_d4_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l939_d5_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L939 Devices, additional stubs</title>
+            <title subgraph='1'>L939 Devices, HFSS circuit</title>
+            <title subgraph='2'>L939 Devices, standard circuit</title>
+            <legend>
+                <entry>D1</entry>
+                <entry>D2</entry>
+                <entry>D3</entry>
+                <entry>D4</entry>
+                <entry>D5</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+            <item>2</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n4_l940_d1_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l940_d2_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l940_d3_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l940_d4_duroid1</key>
+            <key>mixer_cl_100GHz_n4_l940_d5_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L940 Devices, additional stubs</title>
+            <title subgraph='1'>L940 Devices, HFSS circuit</title>
+            <title subgraph='2'>L940 Devices, standard circuit</title>
+            <legend>
+                <entry>D1</entry>
+                <entry>D2</entry>
+                <entry>D3</entry>
+                <entry>D4</entry>
+                <entry>D5</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='false'>
+            <key>
+                <key_sequence>
+                    <first>key_diode_size</first>
+                    <second>key_layer</second>
+                </key_sequence>
+                <key_base>mixer_cl_100GHz_n4</key_base>
+                <key_layer>
+                    <layer>l938</layer>
+                    <layer>l939</layer>
+                    <layer>l940</layer>
+                </key_layer>
+                <key_diode_size>
+                    <dsize>d1</dsize>
+                    <dsize>d2</dsize>
+                    <dsize>d3</dsize>
+                    <dsize>d4</dsize>
+                    <dsize>d5</dsize>
+                </key_diode_size>
+            </key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>Layer comparison, ADS circuit</title>
+            <title subgraph='1'>Layer comparison, HFSS circuit</title>
+            <legend>
+                <entry>L938</entry>
+                <entry>L939</entry>
+                <entry>L940</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='false'>
+            <key>
+                <key_sequence>
+                    <first>key_layer</first>
+                    <second>key_diode_size</second>
+                    <third>key_harmonic</third>
+                </key_sequence>
+                <key_base>mixer_cl_100GHz</key_base>
+                <key_layer>
+                    <layer>l938</layer>
+                    <layer>l939</layer>
+                    <layer>l940</layer>
+                </key_layer>
+                <key_diode_size>
+                    <dsize>d1</dsize>
+                    <dsize>d2</dsize>
+                    <dsize>d3</dsize>
+                    <dsize>d4</dsize>
+                    <dsize>d5</dsize>
+                </key_diode_size>
+                <key_harmonic>
+                    <harmonic>n2</harmonic>
+                    <harmonic>n4</harmonic>
+                </key_harmonic>
+            </key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>2nd and 4th harmonic comparison, ADS circuit</title>
+            <title subgraph='1'>2nd and 4th harmonic comparison, HFSS circuit</title>
+            <legend>
+                <entry>2nd harmonic mixer</entry>
+                <entry>4th harmonic mixer</entry>
+            </legend>
+        </labels>
+    </graph>
+</figures>

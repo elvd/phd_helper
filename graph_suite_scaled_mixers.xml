@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<figures>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l938_d1_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l938_d1_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l938_d1_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L938 D1 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L938 D1 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l938_d2_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l938_d2_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l938_d2_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L938 D2 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L938 D2 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l938_d3_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l938_d3_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l938_d3_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L938 D3 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L938 D3 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l938_d4_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l938_d4_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l938_d4_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L938 D4 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L938 D4 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l938_d5_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l938_d5_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l938_d5_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L938 D5 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L938 D5 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l939_d1_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l939_d1_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l939_d1_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L939 D1 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L939 D1 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l939_d2_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l939_d2_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l939_d2_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L939 D2 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L939 D2 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l939_d3_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l939_d3_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l939_d3_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L939 D3 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L939 D3 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l939_d4_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l939_d4_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l939_d4_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L939 D4 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L939 D4 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l939_d5_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l939_d5_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l939_d5_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L939 D5 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L939 D5 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l940_d1_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l940_d1_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l940_d1_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L940 D1 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L940 D1 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l940_d2_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l940_d2_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l940_d2_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L940 D2 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L940 D2 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l940_d3_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l940_d3_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l940_d3_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L940 D3 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L940 D3 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l940_d4_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l940_d4_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l940_d4_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L940 D4 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L940 D4 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='true'>
+            <key>mixer_cl_100GHz_n2_l940_d5_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_l940_d5_duroid1</key>
+            <key>mixer_cl_100GHz_n2_sca_cap_iv_l940_d5_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L940 D5 regular vs scaled comparison, ADS circuit</title>
+            <title subgraph='1'>L940 D5 regular vs scaled comparison, HFSS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+</figures>

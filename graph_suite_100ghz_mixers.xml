@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<figures>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='false'>
+            <key>
+                <key_sequence>
+                    <first>key_layer</first>
+                    <second>key_diode_size</second>
+                    <third>key_substrate</third>
+                </key_sequence>
+                <key_base>mixer_cl_100GHz_n2</key_base>
+                <key_layer>
+                    <layer>l938</layer>
+                    <layer>l939</layer>
+                    <layer>l940</layer>
+                </key_layer>
+                <key_diode_size>
+                    <dsize>d1</dsize>
+                    <dsize>d2</dsize>
+                    <dsize>d3</dsize>
+                    <dsize>d4</dsize>
+                    <dsize>d5</dsize>
+                </key_diode_size>
+                <key_substrate>
+                    <substrate>duroid1</substrate>
+                    <substrate>duroid2</substrate>
+                    <substrate>duroid3</substrate>
+                   <substrate>quartz</substrate>
+                </key_substrate>
+            </key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>Substrate comparison, ADS circuit</title>
+            <title subgraph='1'>Substrate comparison, HFSS circuit</title>
+            <legend>
+                <entry>Duroid 1</entry>
+                <entry>Duroid 2</entry>
+                <entry>Duroid 3</entry>
+                <entry>Quartz</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='false'>
+            <key>
+                <key_sequence>
+                    <first>key_diode_size</first>
+                    <second>key_substrate</second>
+                    <third>key_layer</third>
+                </key_sequence>
+                <key_base>mixer_cl_100GHz_n2</key_base>
+                <key_layer>
+                    <layer>l938</layer>
+                    <layer>l939</layer>
+                    <layer>l940</layer>
+                </key_layer>
+                <key_diode_size>
+                    <dsize>d1</dsize>
+                    <dsize>d2</dsize>
+                    <dsize>d3</dsize>
+                    <dsize>d4</dsize>
+                    <dsize>d5</dsize>
+                </key_diode_size>
+                <key_substrate>
+                    <substrate>duroid1</substrate>
+                    <substrate>duroid2</substrate>
+                    <substrate>duroid3</substrate>
+                   <substrate>quartz</substrate>
+                </key_substrate>
+            </key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>Layer comparison, ADS circuit</title>
+            <title subgraph='1'>Layer comparison, HFSS circuit</title>
+            <legend>
+                <entry>L938</entry>
+                <entry>L939</entry>
+                <entry>L940</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='subgraphs'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets key_full='false'>
+            <key>
+                <key_sequence>
+                    <first>key_layer</first>
+                    <second>key_substrate</second>
+                    <third>key_diode_size</third>
+                </key_sequence>
+                <key_base>mixer_cl_100GHz_n2</key_base>
+                <key_layer>
+                    <layer>l938</layer>
+                    <layer>l939</layer>
+                    <layer>l940</layer>
+                </key_layer>
+                <key_diode_size>
+                    <dsize>d1</dsize>
+                    <dsize>d2</dsize>
+                    <dsize>d3</dsize>
+                    <dsize>d4</dsize>
+                    <dsize>d5</dsize>
+                </key_diode_size>
+                <key_substrate>
+                    <substrate>duroid1</substrate>
+                    <substrate>duroid2</substrate>
+                    <substrate>duroid3</substrate>
+                   <substrate>quartz</substrate>
+                </key_substrate>
+            </key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>Device size comparison, ADS circuit</title>
+            <title subgraph='1'>Device size comparison, HFSS circuit</title>
+            <legend>
+                <entry>D1</entry>
+                <entry>D2</entry>
+                <entry>D3</entry>
+                <entry>D4</entry>
+                <entry>D5</entry>
+            </legend>
+        </labels>
+    </graph>
+</figures>
