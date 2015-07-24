@@ -6,7 +6,7 @@
             <item>0</item>
             <item>2</item>
         </subgraphs>
-        <datasets key_full='true'>
+        <datasets>
             <key>mixer_cl_20GHz_l938_d1</key>
             <key>mixer_cl_20GHz_l938_d2</key>
             <key>mixer_cl_20GHz_l938_d3</key>
@@ -32,7 +32,7 @@
             <item>0</item>
             <item>2</item>
         </subgraphs>
-        <datasets key_full='true'>
+        <datasets>
             <key>mixer_cl_20GHz_l939_d1</key>
             <key>mixer_cl_20GHz_l939_d2</key>
             <key>mixer_cl_20GHz_l939_d3</key>
@@ -58,7 +58,7 @@
             <item>0</item>
             <item>2</item>
         </subgraphs>
-        <datasets key_full='true'>
+        <datasets>
             <key>mixer_cl_20GHz_l940_d1</key>
             <key>mixer_cl_20GHz_l940_d2</key>
             <key>mixer_cl_20GHz_l940_d3</key>
@@ -83,7 +83,7 @@
         <subgraphs separate='subgraphs'>
             <item>0</item>
         </subgraphs>
-        <datasets key_full='true'>
+        <datasets>
             <key>mixer_cl_20GHz_l938_d1</key>
             <key>mixer_cl_20GHz_l939_d1</key>
             <key>mixer_cl_20GHz_l940_d1</key>
@@ -103,7 +103,7 @@
         <subgraphs separate='subgraphs'>
             <item>0</item>
         </subgraphs>
-        <datasets key_full='true'>
+        <datasets>
             <key>mixer_cl_20GHz_l938_d2</key>
             <key>mixer_cl_20GHz_l939_d2</key>
             <key>mixer_cl_20GHz_l940_d2</key>
@@ -123,7 +123,7 @@
         <subgraphs separate='subgraphs'>
             <item>0</item>
         </subgraphs>
-        <datasets key_full='true'>
+        <datasets>
             <key>mixer_cl_20GHz_l938_d3</key>
             <key>mixer_cl_20GHz_l939_d3</key>
             <key>mixer_cl_20GHz_l940_d3</key>
@@ -143,7 +143,7 @@
         <subgraphs separate='subgraphs'>
             <item>0</item>
         </subgraphs>
-        <datasets key_full='true'>
+        <datasets>
             <key>mixer_cl_20GHz_l938_d4</key>
             <key>mixer_cl_20GHz_l939_d4</key>
             <key>mixer_cl_20GHz_l940_d4</key>
@@ -163,7 +163,7 @@
         <subgraphs separate='subgraphs'>
             <item>0</item>
         </subgraphs>
-        <datasets key_full='true'>
+        <datasets>
             <key>mixer_cl_20GHz_l938_d5</key>
             <key>mixer_cl_20GHz_l939_d5</key>
             <key>mixer_cl_20GHz_l940_d5</key>
@@ -184,7 +184,7 @@
             <item>0</item>
             <item>1</item>
         </subgraphs>
-        <datasets key_full='true'>
+        <datasets>
             <key>mixer_cl_20GHz_l938_d1</key>
             <key>mixer_cl_20GHz_l938_d2</key>
             <key>mixer_cl_20GHz_l938_d3</key>
@@ -219,7 +219,6 @@
             <title dataset='l940_d3'>L940 D3 Circuit comparison</title>
             <title dataset='l940_d4'>L940 D4 Circuit comparison</title>
             <title dataset='l940_d5'>L940 D5 Circuit comparison</title>
-
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
