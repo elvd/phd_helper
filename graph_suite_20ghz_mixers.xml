@@ -2,7 +2,7 @@
 
 <figures>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
             <item>2</item>
         </subgraphs>
@@ -28,7 +28,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
             <item>2</item>
         </subgraphs>
@@ -54,7 +54,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
             <item>2</item>
         </subgraphs>
@@ -80,7 +80,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
         </subgraphs>
         <datasets>
@@ -100,7 +100,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
         </subgraphs>
         <datasets>
@@ -120,7 +120,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
         </subgraphs>
         <datasets>
@@ -140,7 +140,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
         </subgraphs>
         <datasets>
@@ -160,7 +160,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
         </subgraphs>
         <datasets>
@@ -180,49 +180,273 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='datasets'>
+        <subgraphs separate='no'>
             <item>0</item>
             <item>1</item>
         </subgraphs>
         <datasets>
             <key>mixer_cl_20GHz_l938_d1</key>
-            <key>mixer_cl_20GHz_l938_d2</key>
-            <key>mixer_cl_20GHz_l938_d3</key>
-            <key>mixer_cl_20GHz_l938_d4</key>
-            <key>mixer_cl_20GHz_l938_d5</key>
-            <key>mixer_cl_20GHz_l939_d1</key>
-            <key>mixer_cl_20GHz_l939_d2</key>
-            <key>mixer_cl_20GHz_l939_d3</key>
-            <key>mixer_cl_20GHz_l939_d4</key>
-            <key>mixer_cl_20GHz_l939_d5</key>
-            <key>mixer_cl_20GHz_l940_d1</key>
-            <key>mixer_cl_20GHz_l940_d2</key>
-            <key>mixer_cl_20GHz_l940_d3</key>
-            <key>mixer_cl_20GHz_l940_d4</key>
-            <key>mixer_cl_20GHz_l940_d5</key>
         </datasets>
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title dataset='l938_d1'>L938 D1 Circuit comparison</title>
-            <title dataset='l938_d2'>L938 D2 Circuit comparison</title>
-            <title dataset='l938_d3'>L938 D3 Circuit comparison</title>
-            <title dataset='l938_d4'>L938 D4 Circuit comparison</title>
-            <title dataset='l938_d5'>L938 D5 Circuit comparison</title>
-            <title dataset='l939_d1'>L939 D1 Circuit comparison</title>
-            <title dataset='l939_d2'>L939 D2 Circuit comparison</title>
-            <title dataset='l939_d3'>L939 D3 Circuit comparison</title>
-            <title dataset='l939_d4'>L939 D4 Circuit comparison</title>
-            <title dataset='l939_d5'>L939 D5 Circuit comparison</title>
-            <title dataset='l940_d1'>L940 D1 Circuit comparison</title>
-            <title dataset='l940_d2'>L940 D2 Circuit comparison</title>
-            <title dataset='l940_d3'>L940 D3 Circuit comparison</title>
-            <title dataset='l940_d4'>L940 D4 Circuit comparison</title>
-            <title dataset='l940_d5'>L940 D5 Circuit comparison</title>
+            <title>L938 D1 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
             </legend>
         </labels>
     </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l938_d2</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L938 D2 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l938_d3</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L938 D3 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l938_d4</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L938 D4 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l938_d5</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L938 D5 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l939_d1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L939 D1 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l939_d2</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L939 D2 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l939_d3</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L939 D3 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l939_d4</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L939 D4 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l939_d5</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L939 D5 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l940_d1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L940 D1 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l940_d2</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L940 D2 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l940_d3</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L940 D3 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l940_d4</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L940 D4 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='no'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_20GHz_l940_d5</key>
+        </datasets>
+        <labels>
+            <xlabel>LO power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title>L940 D5 Circuit comparison</title>
+            <legend>
+                <entry>ADS Circuit</entry>
+                <entry>HFSS Circuit</entry>
+            </legend>
+        </labels>
+    </graph>    
 </figures>

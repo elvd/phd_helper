@@ -9,24 +9,45 @@ import os
 import lxml.etree as etree
 
 
-def assemble_keys(graph):
-    pass
+def construct_legend(legend_xml):
+    legend_string = list()
+    for entry in legend_xml:
+        legend_string.append(entry.text)
+    return legend_string
+
 
 filename_list = os.listdir(os.getcwd())
 filename_list = [filename for filename in filename_list if
                  os.path.splitext(filename)[1] == '.xml']
 
-graph_info = etree.parse('graph_suite_20ghz_mixers.xml')
-graph_info_root = graph_info.getroot()
+for filename in filename_list:
+    graph_info = etree.parse(filename)
+    graph_info_root = graph_info.getroot()
 
-for graph in graph_info_root:
-    key_full = graph.find('.//*[@key_full]').values()[0]
+    for graph in graph_info_root:
+        subgraphs_separate = graph.find('.//*[@separate]').values()[0]
+        graph_labels = graph.find('labels')
 
-    if key_full == 'false':
-        keys = assemble_keys(graph)
-    else:
-        keys = [key.text for key in graph.findall('.//key')]
+        if subgraphs_separate == 'yes':
+            for subgraph in graph.find('subgraphs'):
+                for data_key in graph.find('datasets'):
+                    print data_key.text
+                    print int(subgraph.text)
+                print graph_labels.find('xlabel').text
+                print graph_labels.find('ylabel').text
+                subgraph_title = ''.join([".//*[@subgraph='",
+                                         subgraph.text, "']"])
+                print graph_labels.find(subgraph_title).text
+                print construct_legend(graph_labels.find('legend'))
+        else:
+            for data_key in graph.find('datasets'):
+                for subgraph in graph.find('subgraphs'):
+                    print data_key.text
+                    print int(subgraph.text)
+                print graph_labels.find('xlabel').text
+                print graph_labels.find('ylabel').text
+                print graph_labels.find('title').text
+                print construct_legend(graph_labels.find('legend'))
 
-    graph_labels = graph.find('labels')
-
-
+        print 'next graph'
+    print 'next file'

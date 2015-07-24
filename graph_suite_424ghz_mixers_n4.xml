@@ -2,7 +2,7 @@
 
 <figures>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
             <item>1</item>
         </subgraphs>
@@ -28,7 +28,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
             <item>1</item>
         </subgraphs>
@@ -54,7 +54,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
             <item>1</item>
         </subgraphs>
@@ -80,7 +80,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
             <item>1</item>
         </subgraphs>
@@ -102,7 +102,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
             <item>1</item>
         </subgraphs>
@@ -124,7 +124,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
             <item>1</item>
         </subgraphs>
@@ -146,7 +146,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
             <item>1</item>
         </subgraphs>
@@ -168,7 +168,7 @@
         </labels>
     </graph>
     <graph>
-        <subgraphs separate='subgraphs'>
+        <subgraphs separate='yes'>
             <item>0</item>
             <item>1</item>
         </subgraphs>
