@@ -4,7 +4,6 @@
     <graph>
         <subgraphs separate='yes'>
             <item>0</item>
-            <item>1</item>
         </subgraphs>
         <datasets>
             <key>mixer_cl_424GHz_regular_l938_d1_duroid1</key>
@@ -17,7 +16,6 @@
             <xlabel>LO Power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
             <title subgraph='0'>L938 device size comparison, ADS circuit</title>
-            <title subgraph='1'>L938 device size comparison, HFSS circuit</title>
             <legend>
                 <entry>D1</entry>
                 <entry>D2</entry>
@@ -30,7 +28,6 @@
     <graph>
         <subgraphs separate='yes'>
             <item>0</item>
-            <item>1</item>
         </subgraphs>
         <datasets>
             <key>mixer_cl_424GHz_regular_l939_d1_duroid1</key>
@@ -43,7 +40,6 @@
             <xlabel>LO Power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
             <title subgraph='0'>L939 device size comparison, ADS circuit</title>
-            <title subgraph='1'>L939 device size comparison, HFSS circuit</title>
             <legend>
                 <entry>D1</entry>
                 <entry>D2</entry>
@@ -56,7 +52,6 @@
     <graph>
         <subgraphs separate='yes'>
             <item>0</item>
-            <item>1</item>
         </subgraphs>
         <datasets>
             <key>mixer_cl_424GHz_regular_l940_d1_duroid1</key>
@@ -69,7 +64,6 @@
             <xlabel>LO Power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
             <title subgraph='0'>L940 device size comparison, ADS circuit</title>
-            <title subgraph='1'>L940 device size comparison, HFSS circuit</title>
             <legend>
                 <entry>D1</entry>
                 <entry>D2</entry>
@@ -82,7 +76,6 @@
     <graph>
         <subgraphs separate='yes'>
             <item>0</item>
-            <item>1</item>
         </subgraphs>
         <datasets>
             <key>mixer_cl_424GHz_regular_l938_d1_duroid1</key>
@@ -93,7 +86,6 @@
             <xlabel>LO Power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
             <title subgraph='0'>D1 layer comparison, ADS circuit</title>
-            <title subgraph='1'>D1 layer comparison, HFSS circuit</title>
             <legend>
                 <entry>L938</entry>
                 <entry>L939</entry>
@@ -104,7 +96,6 @@
     <graph>
         <subgraphs separate='yes'>
             <item>0</item>
-            <item>1</item>
         </subgraphs>
         <datasets>
             <key>mixer_cl_424GHz_regular_l938_d2_duroid1</key>
@@ -115,7 +106,6 @@
             <xlabel>LO Power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
             <title subgraph='0'>D2 layer comparison, ADS circuit</title>
-            <title subgraph='1'>D2 layer comparison, HFSS circuit</title>
             <legend>
                 <entry>L938</entry>
                 <entry>L939</entry>
@@ -126,7 +116,6 @@
     <graph>
         <subgraphs separate='yes'>
             <item>0</item>
-            <item>1</item>
         </subgraphs>
         <datasets>
             <key>mixer_cl_424GHz_regular_l938_d3_duroid1</key>
@@ -137,7 +126,6 @@
             <xlabel>LO Power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
             <title subgraph='0'>D3 layer comparison, ADS circuit</title>
-            <title subgraph='1'>D3 layer comparison, HFSS circuit</title>
             <legend>
                 <entry>L938</entry>
                 <entry>L939</entry>
@@ -148,7 +136,6 @@
     <graph>
         <subgraphs separate='yes'>
             <item>0</item>
-            <item>1</item>
         </subgraphs>
         <datasets>
             <key>mixer_cl_424GHz_regular_l938_d4_duroid1</key>
@@ -159,7 +146,6 @@
             <xlabel>LO Power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
             <title subgraph='0'>D4 layer comparison, ADS circuit</title>
-            <title subgraph='1'>D4 layer comparison, HFSS circuit</title>
             <legend>
                 <entry>L938</entry>
                 <entry>L939</entry>
@@ -170,7 +156,6 @@
     <graph>
         <subgraphs separate='yes'>
             <item>0</item>
-            <item>1</item>
         </subgraphs>
         <datasets>
             <key>mixer_cl_424GHz_regular_l938_d5_duroid1</key>
@@ -181,7 +166,6 @@
             <xlabel>LO Power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
             <title subgraph='0'>D5 layer comparison, ADS circuit</title>
-            <title subgraph='1'>D5 layer comparison, HFSS circuit</title>
             <legend>
                 <entry>L938</entry>
                 <entry>L939</entry>
