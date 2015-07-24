@@ -190,7 +190,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L938 D1 Circuit comparison</title>
+            <title subgraph='1'>L938 D1 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -208,7 +208,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L938 D2 Circuit comparison</title>
+            <title subgraph='1'>L938 D2 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -226,7 +226,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L938 D3 Circuit comparison</title>
+            <title subgraph='1'>L938 D3 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -244,7 +244,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L938 D4 Circuit comparison</title>
+            <title subgraph='1'>L938 D4 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -262,7 +262,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L938 D5 Circuit comparison</title>
+            <title subgraph='1'>L938 D5 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -280,7 +280,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L939 D1 Circuit comparison</title>
+            <title subgraph='1'>L939 D1 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -298,7 +298,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L939 D2 Circuit comparison</title>
+            <title subgraph='1'>L939 D2 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -316,7 +316,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L939 D3 Circuit comparison</title>
+            <title subgraph='1'>L939 D3 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -334,7 +334,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L939 D4 Circuit comparison</title>
+            <title subgraph='1'>L939 D4 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -352,7 +352,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L939 D5 Circuit comparison</title>
+            <title subgraph='1'>L939 D5 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -370,7 +370,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L940 D1 Circuit comparison</title>
+            <title subgraph='1'>L940 D1 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -388,7 +388,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L940 D2 Circuit comparison</title>
+            <title subgraph='1'>L940 D2 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -406,7 +406,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L940 D3 Circuit comparison</title>
+            <title subgraph='1'>L940 D3 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -424,7 +424,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L940 D4 Circuit comparison</title>
+            <title subgraph='1'>L940 D4 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
@@ -442,7 +442,7 @@
         <labels>
             <xlabel>LO power, [dBm]</xlabel>
             <ylabel>Conversion Gain, [dB]</ylabel>
-            <title>L940 D5 Circuit comparison</title>
+            <title subgraph='1'>L940 D5 Circuit comparison</title>
             <legend>
                 <entry>ADS Circuit</entry>
                 <entry>HFSS Circuit</entry>
