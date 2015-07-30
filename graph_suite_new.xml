@@ -1,0 +1,90 @@
+<figures>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_424GHz_regular_l938_d1_duroid1</key>
+            <key>mixer_cl_424GHz_scaled_cap_l938_d1_duroid1</key>
+            <key>mixer_cl_424GHz_scaled_cap_iv_l938_d1_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L938 D1 regular vs scaled comparison, ADS circuit</title>
+            <legend>
+                <entry>Regular size</entry>
+                <entry>Scaled capacitance</entry>
+                <entry>Scaled capacitance and I-V</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_424GHz_regular_l938_d1_duroid1</key>
+            <key>mixer_cl_424GHz_regular_l938_d2_duroid1</key>
+            <key>mixer_cl_424GHz_regular_l938_d3_duroid1</key>
+            <key>mixer_cl_424GHz_regular_l938_d4_duroid1</key>
+            <key>mixer_cl_424GHz_regular_l938_d5_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L938 device size comparison, ADS circuit</title>
+            <legend>
+                <entry>D1</entry>
+                <entry>D2</entry>
+                <entry>D3</entry>
+                <entry>D4</entry>
+                <entry>D5</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_424GHz_regular_l939_d1_duroid1</key>
+            <key>mixer_cl_424GHz_regular_l939_d2_duroid1</key>
+            <key>mixer_cl_424GHz_regular_l939_d3_duroid1</key>
+            <key>mixer_cl_424GHz_regular_l939_d4_duroid1</key>
+            <key>mixer_cl_424GHz_regular_l939_d5_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>L939 device size comparison, ADS circuit</title>
+            <legend>
+                <entry>D1</entry>
+                <entry>D2</entry>
+                <entry>D3</entry>
+                <entry>D4</entry>
+                <entry>D5</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>mixer_cl_424GHz_regular_l938_d2_duroid1</key>
+            <key>mixer_cl_424GHz_regular_l939_d2_duroid1</key>
+            <key>mixer_cl_424GHz_regular_l940_d2_duroid1</key>
+        </datasets>
+        <labels>
+            <xlabel>LO Power, [dBm]</xlabel>
+            <ylabel>Conversion Gain, [dB]</ylabel>
+            <title subgraph='0'>D2 layer comparison, ADS circuit</title>
+            <legend>
+                <entry>L938</entry>
+                <entry>L939</entry>
+                <entry>L940</entry>
+            </legend>
+        </labels>
+    </graph>
+</figures>

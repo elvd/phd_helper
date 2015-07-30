@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<figures>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l938_d2_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l939_d2_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l940_d2_duroid</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>Device Size 2, ADS circuit, Duroid</title>
+            <legend>
+                <entry>L938</entry>
+                <entry>L939</entry>
+                <entry>L940</entry>
+            </legend>
+        </labels>
+    </graph>    
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l938_d2_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l939_d2_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l940_d2_duroid</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>Device Size 2, HFSS circuit, Duroid</title>
+            <legend>
+                <entry>L938</entry>
+                <entry>L939</entry>
+                <entry>L940</entry>
+            </legend>
+        </labels>
+    </graph>    
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l938_d2_quartz</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l939_d2_quartz</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l940_d2_quartz</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>Device Size 2, ADS circuit, Quartz</title>
+            <legend>
+                <entry>L938</entry>
+                <entry>L939</entry>
+                <entry>L940</entry>
+            </legend>
+        </labels>
+    </graph>    
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l938_d2_quartz</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l939_d2_quartz</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l940_d2_quartz</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>Device Size 2, HFSS circuit, Quartz</title>
+            <legend>
+                <entry>L938</entry>
+                <entry>L939</entry>
+                <entry>L940</entry>
+            </legend>
+        </labels>
+    </graph>    
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l938_d3_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l939_d3_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l940_d3_duroid</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>Device Size 3, ADS circuit, Duroid</title>
+            <legend>
+                <entry>L938</entry>
+                <entry>L939</entry>
+                <entry>L940</entry>
+            </legend>
+        </labels>
+    </graph>    
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l938_d3_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l939_d3_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l940_d3_duroid</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>Device Size 3, HFSS circuit, Duroid</title>
+            <legend>
+                <entry>L938</entry>
+                <entry>L939</entry>
+                <entry>L940</entry>
+            </legend>
+        </labels>
+    </graph>    
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l938_d3_quartz</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l939_d3_quartz</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l940_d3_quartz</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>Device Size 3, ADS circuit, Quartz</title>
+            <legend>
+                <entry>L938</entry>
+                <entry>L939</entry>
+                <entry>L940</entry>
+            </legend>
+        </labels>
+    </graph>    
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l938_d3_quartz</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l939_d3_quartz</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l940_d3_quartz</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>Device Size 3, HFSS circuit, Quartz</title>
+            <legend>
+                <entry>L938</entry>
+                <entry>L939</entry>
+                <entry>L940</entry>
+            </legend>
+        </labels>
+    </graph>    
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l938_d1_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l938_d2_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l938_d3_duroid</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>L938 Devices, ADS circuit, Duroid</title>
+            <legend>
+                <entry>D1</entry>
+                <entry>D2</entry>
+                <entry>D3</entry>
+            </legend>
+        </labels>
+    </graph>    
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l938_d1_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l938_d2_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l938_d3_duroid</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>L938 Devices, HFSS circuit, Duroid</title>
+            <legend>
+                <entry>D1</entry>
+                <entry>D2</entry>
+                <entry>D3</entry>
+            </legend>
+        </labels>
+    </graph>    
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l939_d1_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l939_d2_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_ads_l939_d3_duroid</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>L939 Devices, ADS circuit, Duroid</title>
+            <legend>
+                <entry>D1</entry>
+                <entry>D2</entry>
+                <entry>D3</entry>
+            </legend>
+        </labels>
+    </graph>    
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+        </subgraphs>
+        <datasets>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l939_d1_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l939_d2_duroid</key>
+            <key>amplifier_gain_100GHz_regular_sparam_hfss_l939_d3_duroid</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S21, [dB]</ylabel>
+            <title subgraph='0'>L939 Devices, HFSS circuit, Duroid</title>
+            <legend>
+                <entry>D1</entry>
+                <entry>D2</entry>
+                <entry>D3</entry>
+            </legend>
+        </labels>
+    </graph>    
+</figures>
