@@ -12,12 +12,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>Device Size 2, ADS circuit, Duroid</title>
             <legend>
-                <entry>L938</entry>
-                <entry>L939</entry>
-                <entry>L940</entry>
+                <entry>L938, $S_{21}$</entry>
+                <entry>L938, $S_{11}$</entry>
+                <entry>L939, $S_{21}$</entry>
+                <entry>L939, $S_{11}$</entry>
+                <entry>L940, $S_{21}$</entry>
+                <entry>L940, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
@@ -32,12 +35,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>Device Size 2, HFSS circuit, Duroid</title>
             <legend>
-                <entry>L938</entry>
-                <entry>L939</entry>
-                <entry>L940</entry>
+                <entry>L938, $S_{21}$</entry>
+                <entry>L938, $S_{11}$</entry>
+                <entry>L939, $S_{21}$</entry>
+                <entry>L939, $S_{11}$</entry>
+                <entry>L940, $S_{21}$</entry>
+                <entry>L940, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
@@ -52,12 +58,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>Device Size 2, ADS circuit, Quartz</title>
             <legend>
-                <entry>L938</entry>
-                <entry>L939</entry>
-                <entry>L940</entry>
+                <entry>L938, $S_{21}$</entry>
+                <entry>L938, $S_{11}$</entry>
+                <entry>L939, $S_{21}$</entry>
+                <entry>L939, $S_{11}$</entry>
+                <entry>L940, $S_{21}$</entry>
+                <entry>L940, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
@@ -72,12 +81,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>Device Size 2, HFSS circuit, Quartz</title>
             <legend>
-                <entry>L938</entry>
-                <entry>L939</entry>
-                <entry>L940</entry>
+                <entry>L938, $S_{21}$</entry>
+                <entry>L938, $S_{11}$</entry>
+                <entry>L939, $S_{21}$</entry>
+                <entry>L939, $S_{11}$</entry>
+                <entry>L940, $S_{21}$</entry>
+                <entry>L940, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
@@ -92,12 +104,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>Device Size 3, ADS circuit, Duroid</title>
             <legend>
-                <entry>L938</entry>
-                <entry>L939</entry>
-                <entry>L940</entry>
+                <entry>L938, $S_{21}$</entry>
+                <entry>L938, $S_{11}$</entry>
+                <entry>L939, $S_{21}$</entry>
+                <entry>L939, $S_{11}$</entry>
+                <entry>L940, $S_{21}$</entry>
+                <entry>L940, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
@@ -112,12 +127,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>Device Size 3, HFSS circuit, Duroid</title>
             <legend>
-                <entry>L938</entry>
-                <entry>L939</entry>
-                <entry>L940</entry>
+                <entry>L938, $S_{21}$</entry>
+                <entry>L938, $S_{11}$</entry>
+                <entry>L939, $S_{21}$</entry>
+                <entry>L939, $S_{11}$</entry>
+                <entry>L940, $S_{21}$</entry>
+                <entry>L940, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
@@ -132,12 +150,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>Device Size 3, ADS circuit, Quartz</title>
             <legend>
-                <entry>L938</entry>
-                <entry>L939</entry>
-                <entry>L940</entry>
+                <entry>L938, $S_{21}$</entry>
+                <entry>L938, $S_{11}$</entry>
+                <entry>L939, $S_{21}$</entry>
+                <entry>L939, $S_{11}$</entry>
+                <entry>L940, $S_{21}$</entry>
+                <entry>L940, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
@@ -152,12 +173,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>Device Size 3, HFSS circuit, Quartz</title>
             <legend>
-                <entry>L938</entry>
-                <entry>L939</entry>
-                <entry>L940</entry>
+                <entry>L938, $S_{21}$</entry>
+                <entry>L938, $S_{11}$</entry>
+                <entry>L939, $S_{21}$</entry>
+                <entry>L939, $S_{11}$</entry>
+                <entry>L940, $S_{21}$</entry>
+                <entry>L940, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
@@ -172,12 +196,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>L938 Devices, ADS circuit, Duroid</title>
             <legend>
-                <entry>D1</entry>
-                <entry>D2</entry>
-                <entry>D3</entry>
+                <entry>D1, $S_{21}$</entry>
+                <entry>D1, $S_{11}$</entry>
+                <entry>D2, $S_{21}$</entry>
+                <entry>D2, $S_{11}$</entry>
+                <entry>D3, $S_{21}$</entry>
+                <entry>D3, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
@@ -192,12 +219,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>L938 Devices, HFSS circuit, Duroid</title>
             <legend>
-                <entry>D1</entry>
-                <entry>D2</entry>
-                <entry>D3</entry>
+                <entry>D1, $S_{21}$</entry>
+                <entry>D1, $S_{11}$</entry>
+                <entry>D2, $S_{21}$</entry>
+                <entry>D2, $S_{11}$</entry>
+                <entry>D3, $S_{21}$</entry>
+                <entry>D3, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
@@ -212,12 +242,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>L939 Devices, ADS circuit, Duroid</title>
             <legend>
-                <entry>D1</entry>
-                <entry>D2</entry>
-                <entry>D3</entry>
+                <entry>D1, $S_{21}$</entry>
+                <entry>D1, $S_{11}$</entry>
+                <entry>D2, $S_{21}$</entry>
+                <entry>D2, $S_{11}$</entry>
+                <entry>D3, $S_{21}$</entry>
+                <entry>D3, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
@@ -232,12 +265,15 @@
         </datasets>
         <labels>
             <xlabel>Frequency, [GHz]</xlabel>
-            <ylabel>S21, [dB]</ylabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
             <title subgraph='0'>L939 Devices, HFSS circuit, Duroid</title>
             <legend>
-                <entry>D1</entry>
-                <entry>D2</entry>
-                <entry>D3</entry>
+                <entry>D1, $S_{21}$</entry>
+                <entry>D1, $S_{11}$</entry>
+                <entry>D2, $S_{21}$</entry>
+                <entry>D2, $S_{11}$</entry>
+                <entry>D3, $S_{21}$</entry>
+                <entry>D3, $S_{11}$</entry>
             </legend>
         </labels>
     </graph>    
