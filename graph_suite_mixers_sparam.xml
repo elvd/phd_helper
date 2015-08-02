@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<figures>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_100GHz_ads_duroid1_lo_side_add_stubs</key>
+            <key>sparam_ads_mixer_100GHz_hfss_duroid1_lo_side</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>Duroid 1 LO side $S_{21}$ Comparison</title>
+            <title subgraph='1'>Duroid 1 LO side $S_{11}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_100GHz_ads_duroid1_rf_side_add_stubs</key>
+            <key>sparam_ads_mixer_100GHz_hfss_duroid1_rf_side</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>Duroid 1 RF side $S_{21}$ Comparison</title>
+            <title subgraph='1'>Duroid 1 RF side $S_{31}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_100GHz_ads_duroid2_lo_side_add_stubs</key>
+            <key>sparam_ads_mixer_100GHz_hfss_duroid2_lo_side</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>Duroid 2 LO side $S_{21}$ Comparison</title>
+            <title subgraph='1'>Duroid 2 LO side $S_{11}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_100GHz_ads_duroid2_rf_side_add_stubs</key>
+            <key>sparam_ads_mixer_100GHz_hfss_duroid2_rf_side</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>Duroid 2 RF side $S_{21}$ Comparison</title>
+            <title subgraph='1'>Duroid 2 RF side $S_{31}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_100GHz_ads_duroid3_lo_side_add_stubs</key>
+            <key>sparam_ads_mixer_100GHz_hfss_duroid3_lo_side</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>Duroid 3 LO side $S_{21}$ Comparison</title>
+            <title subgraph='1'>Duroid 3 LO side $S_{11}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_100GHz_ads_duroid3_rf_side_add_stubs</key>
+            <key>sparam_ads_mixer_100GHz_hfss_duroid3_rf_side</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>Duroid 3 RF side $S_{21}$ Comparison</title>
+            <title subgraph='1'>Duroid 3 RF side $S_{31}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_100GHz_ads_quartz_lo_side_add_stubs</key>
+            <key>sparam_ads_mixer_100GHz_hfss_quartz_lo_side</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>Quartz LO side $S_{21}$ Comparison</title>
+            <title subgraph='1'>Quartz LO side $S_{11}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_100GHz_ads_quartz_rf_side_add_stubs</key>
+            <key>sparam_ads_mixer_100GHz_hfss_quartz_rf_side</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>Quartz RF side $S_{21}$ Comparison</title>
+            <title subgraph='1'>Quartz RF side $S_{31}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_100GHz_ads_duroid1_lo_side_n4</key>
+            <key>sparam_ads_mixer_100GHz_hfss_duroid1_lo_side_n4</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>LO side $S_{21}$ Comparison</title>
+            <title subgraph='1'>LO side $S_{11}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_100GHz_ads_duroid1_rf_side_n4</key>
+            <key>sparam_ads_mixer_100GHz_hfss_duroid1_rf_side_n4</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>RF side $S_{21}$ Comparison</title>
+            <title subgraph='1'>RF side $S_{31}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_20GHz_ads_lo_side_add_stubs</key>
+            <key>sparam_ads_mixer_20GHz_hfss_lo_side</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>LO side $S_{21}$ Comparison</title>
+            <title subgraph='1'>LO side $S_{11}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+    <graph>
+        <subgraphs separate='yes'>
+            <item>0</item>
+            <item>1</item>
+        </subgraphs>
+        <datasets>
+            <key>sparam_ads_mixer_20GHz_ads_rf_side_add_stubs</key>
+            <key>sparam_ads_mixer_20GHz_hfss_rf_side</key>
+        </datasets>
+        <labels>
+            <xlabel>Frequency, [GHz]</xlabel>
+            <ylabel>S-Parameter, [dB]</ylabel>
+            <title subgraph='0'>RF side $S_{21}$ Comparison</title>
+            <title subgraph='1'>RF side $S_{31}$ Comparison</title>
+            <legend>
+                <entry>ADS circuit</entry>
+                <entry>HFSS circuit</entry>
+            </legend>
+        </labels>
+    </graph>
+
+</figures>    
