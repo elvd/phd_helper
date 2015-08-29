@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Jul 23 15:38:36 2015
+A complementary script to `sim_data_load', this module uses custom XML files
+to create graphs from certain datasets that have been loaded into memory.
+
+The graphs are saved both in png and pickled format to allow for later editing.
 
 @author: elvd
 """
@@ -22,7 +25,7 @@ filename_list = os.listdir(os.getcwd())
 filename_list = [filename for filename in filename_list if
                  os.path.splitext(filename)[1] == '.xml']
 
-graph_counter = 0
+graph_counter = 0  # to help differentiate graphs from same XML file
 
 for filename in filename_list:
     graph_info = etree.parse(filename)
@@ -30,11 +33,14 @@ for filename in filename_list:
     print 'Processing file: ', filename
 
     for graph in graph_info_root:
+        # Find how to organise subgraphs
         subgraphs_separate = graph.find('.//*[@separate]').values()[0]
+
         graph_labels = graph.find('labels')
 
         if subgraphs_separate == 'yes':
             for subgraph in graph.find('subgraphs'):
+                # uses same style as `elvd_tools.custom_plot'`
                 fig = plt.figure()
                 ax1 = fig.add_subplot(111)
                 ax1.set_color_cycle(['r', 'k', 'b', 'g', 'c', 'm'])
@@ -45,9 +51,11 @@ for filename in filename_list:
 
                 ax1.set_xlabel(graph_labels.find('xlabel').text)
                 ax1.set_ylabel(graph_labels.find('ylabel').text)
+
                 subgraph_title = ''.join([".//*[@subgraph='",
                                          subgraph.text, "']"])
                 ax1.set_title(graph_labels.find(subgraph_title).text)
+
                 ax1.legend(construct_legend(graph_labels.find('legend')),
                            loc='lower right')
 
@@ -70,7 +78,7 @@ for filename in filename_list:
                 graph_filename = '_'.join([os.path.splitext(filename)[0],
                                            str(graph_counter)])
                 graph_filename = '.'.join([graph_filename, 'pickle'])
-                # plt.savefig(graph_filename, dpi=300)
+                plt.savefig(graph_filename, dpi=300)
                 pickle.dump(fig, file(graph_filename, 'w'))
                 graph_counter += 1
                 plt.close(fig)
@@ -112,7 +120,7 @@ for filename in filename_list:
                 graph_filename = '_'.join([os.path.splitext(filename)[0],
                                            str(graph_counter)])
                 graph_filename = '.'.join([graph_filename, 'pickle'])
-                # plt.savefig(graph_filename, dpi=300)
+                plt.savefig(graph_filename, dpi=300)
                 pickle.dump(fig, file(graph_filename, 'w'))
                 graph_counter += 1
                 plt.close(fig)

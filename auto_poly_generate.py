@@ -9,7 +9,7 @@ one datapoint per line. The number of header lines to skip is a parameter that
 is specified as well.
 
 After reading in the contents of a data file, further manipulations are
-possible, using the functions from the iv_manipulate module. To do so,
+possible, using the functions from the `iv_manipulate module'. To do so,
 manually uncomment / comment the manipulations you want to make.
 
 For each file, a graph is drawn, containing both the measured data, and the
@@ -37,12 +37,14 @@ import iv_manipulate
 
 
 startdir = r'D:\projects\phd_helper\rtd\hamza'
-degree = 60
+degree = 60  # degree of fitted polynomial
 
 warnings.simplefilter('ignore', np.RankWarning)
 
 for dirname, subdirlist, filelist in os.walk(startdir):
     os.chdir(dirname)
+
+    # get all files with I-V measurements
     gen = (fname for fname in filelist if
            os.path.splitext(fname)[1] == '.ivm')
 
@@ -51,6 +53,8 @@ for dirname, subdirlist, filelist in os.walk(startdir):
     for fname in gen:
         data = np.loadtxt(fname, skiprows=1)
         data[:, 1] /= 1e-3  # convert to mA
+
+        # I-V scaling routines
         data = iv_manipulate.make_symmetric(data, quadrant='neg')
         data = iv_manipulate.extract_region(data, 'pdr')
         data = iv_manipulate.scale_iv(data, factor=0.1)
@@ -64,12 +68,11 @@ for dirname, subdirlist, filelist in os.walk(startdir):
         device_id = ' '.join(name[1:3])
         plot_title = ' '.join([device_id, 'sample', name[3]])
 
-        try:
-            elvd_tools.custom_plot(data=data,
-                                   xlabel='Voltage, [V]',
-                                   ylabel='Current, [mA]',
-                                   mode='linear',
+        try:  # plot graph
+            elvd_tools.custom_plot(data=data, xlabel='Voltage, [V]',
+                                   ylabel='Current, [mA]', mode='linear',
                                    title=plot_title)
+            # a bit of magic, dependent on filenames following certain pattern
             name = '_'.join(name[1:4])
             name = '_'.join([name, 'sym_neg'])
             name = '.'.join([name, 'jpg'])

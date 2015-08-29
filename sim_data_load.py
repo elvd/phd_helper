@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jul  8 22:49:46 2015
+Main module for simulation data processing. Traverses a folder structure and
+loads results into a dictionary of lists. Each dictionary key is formed by
+concatenating folder names and final file name. For each key, and therefore
+each file, a list of numpy arrays containing the individual results in said
+file is created.
+
+The dictionary keys themselves are held in a separate list. The metadata, i.e.
+column labels, are saved into a second dictionary, using the same keys.
 
 @author: elvd
 """
@@ -25,8 +32,8 @@ for dirname, subdirlist, filelist in os.walk(start_dir):
             # key defined by filename plus path to it
             key_base = os.path.relpath(dirname, start_dir)
             key_base = key_base.replace(os.path.sep, '_')
-
             dict_key = '_'.join([key_base, os.path.splitext(filename)[0]])
+            # absolute path name
             fname = os.path.join(dirname, filename)
 
             # individual datasets stored as elements in a list

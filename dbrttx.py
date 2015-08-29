@@ -68,6 +68,7 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     Lbe = float(Lbe)
     Lbc = float(Lbc)
 
+    # convert to SI units
     Lw *= 1e-10
     Lbe *= 1e-10
     Lbc *= 1e-10
@@ -93,8 +94,8 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
     E = list()
 
     for n in range(NI):
-        E.append((n+1)*de)
-        mult = np.sqrt(2*m*q / (hbar**2))
+        E.append((n + 1) * de)
+        mult = np.sqrt(2 * m * q / (hbar**2))
 
         ke = mult * np.sqrt(Me * (E[n] - Ve))
         kbe = mult * np.sqrt(Mbe * (Vbe - E[n]))
@@ -110,16 +111,16 @@ def dbtx_calc(fractE, fractC, Lw, Lbe, Lbc):
         e = complex(0, kw*Lw)
         N11 = complex(1, a)
         N12 = complex(1, -a)
-        O11 = complex(1, -b) * np.exp(kbe*Lbe)
-        O12 = complex(1, +b) * np.exp(kbe*Lbe)
-        O21 = complex(1, +b) * np.exp(-kbe*Lbe)
-        O22 = complex(1, -b) * np.exp(-kbe*Lbe)
+        O11 = complex(1, -b) * np.exp(kbe * Lbe)
+        O12 = complex(1, +b) * np.exp(kbe * Lbe)
+        O21 = complex(1, +b) * np.exp(-kbe * Lbe)
+        O22 = complex(1, -b) * np.exp(-kbe * Lbe)
         P11 = complex(1, +c) * np.exp(-e)
         P12 = complex(1, -c) * np.exp(-e)
         P21 = complex(1, -c) * np.exp(e)
         P22 = complex(1, +c) * np.exp(e)
-        Q11 = complex(1, -d) * np.exp(kbc*Lbc)
-        Q21 = complex(1, +d) * np.exp(-kbc*Lbc)
+        Q11 = complex(1, -d) * np.exp(kbc * Lbc)
+        Q21 = complex(1, +d) * np.exp(-kbc * Lbc)
 
         T11 = (N11*O11 + N12*O21) * (P11*Q11 + P12*Q21) + \
             (N11*O12 + N12*O22) * (P21*Q11 + P22*Q21)

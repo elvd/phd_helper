@@ -35,7 +35,7 @@ def make_symmetric(data, quadrant='pos'):
     data : numpy.ndarray
         I-V data of one device.
     quadrant : {'pos', 'neg'}, optional
-        Signifies which quadrant is to be used for 'symmetrising' the I-V.
+        Signifies which quadrant is to be used for `symmetrising' the I-V.
 
     Returns:
     --------
@@ -57,7 +57,7 @@ def make_symmetric(data, quadrant='pos'):
 
     """
 
-    if np.ndim(data) != 2:  # only process one IV dataset at a time
+    if np.ndim(data) != 2:  # only process one I-V dataset at a time
         raise IndexError('Incorrect data format')
 
     if np.size(data, 0) < np.size(data, 1):
@@ -65,6 +65,7 @@ def make_symmetric(data, quadrant='pos'):
 
     new_data = data.copy()  # do not change original data
 
+    # create a boolean mask to extract region
     if quadrant == 'pos':
         elements_mask = np.where(new_data[:, 0] >= 0.0)
     elif quadrant == 'neg':
@@ -78,6 +79,7 @@ def make_symmetric(data, quadrant='pos'):
     mirror_data = new_data * -1
     mirror_data = np.flipud(mirror_data)
 
+    # newly symmetric I-V
     if quadrant == 'pos':
         new_data = np.concatenate((mirror_data, new_data))
     else:

@@ -51,6 +51,7 @@ def fit_poly(data, degree):
 
     coeffs = np.polyfit(data[:, 0], data[:, 1], degree)
     fit = np.polyval(coeffs, data[:, 0])
+    # combine original data and fit into a single array
     fit = np.array([data[:, 0], fit])
     fit = fit.T
 
@@ -76,8 +77,9 @@ def poly_to_ads_string(coeffs):
     """
 
     coeffs = coeffs[::-1]
+    # convert to Agilent ADS SDD format
     polynom = ['(%e)*((_v1+_v2)^%d)+' % (j, i) for (i, j) in enumerate(coeffs)]
-    polynom = ''.join(polynom)  # convert to Agilent ADS SDD format
+    polynom = ''.join(polynom)
 
     return polynom
 

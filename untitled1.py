@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Jul 29 18:03:53 2015
+Quick script to load and open pickled matplotlib figures. Allows for manual
+editing of graph parameters before saving them in jpg format. Does not modify
+the pickled files.
 
 @author: Viktor
 """

@@ -68,7 +68,7 @@ def write_record(output_file, record):
 
     """
     for item in record:
-        line_new = ' '.join(item)
+        line_new = ' '.join(item)  # single line of record, key-value pair
         output_file.write(line_new)
 
     output_file.write('\n\n\n')  # record delimeter
@@ -102,13 +102,13 @@ def process_file(inp_fname, out_fname, label_seed):
     >>> add_label_ref.process_file(fname_in, fname_out, label_seed)
 
     """
-    counter = 0
-    record_id = 1
+    counter = 0  # counts blank lines to determine where record ends
+    record_id = 1  # counter added to label_seed to differentiate records
     record_parameters = list()
 
     with open(inp_fname, 'rt') as file_in, open(out_fname, 'wt') as file_out:
         for line in file_in:
-            if counter >= 3:
+            if counter >= 3:  # read in entire record, process
                 counter = 0
 
                 add_label(record_parameters, label_seed, record_id)
@@ -121,9 +121,10 @@ def process_file(inp_fname, out_fname, label_seed):
                 counter = counter + 1
                 continue
 
+            # divide line into key-value pairs
             record_parameters.append(line.split(' ', 1))
 
-        else:
+        else:  # process final record in file
             if record_parameters:
                 add_label(record_parameters, label_seed, record_id)
                 write_record(file_out, record_parameters)
